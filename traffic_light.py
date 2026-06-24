@@ -209,10 +209,18 @@ def start_web_server(getter):
 # ═══════════════════════════════════════════════════════════
 
 class ProcessDetector:
+    """Windows 环境下的 Hermes 进程检测 + CPU 活动监控。
+    
+    CPU 监控用于 detect state.db 未刷新的实时状态（如 clarify 等待期间）。
+    """
+
     def __init__(self):
         self._cache: Optional[bool] = None
         self._cache_at: float = 0.0
         self._self_pid = os.getpid()
+        self._prev_cpu: dict[int, float] = {}
+        self._cpu_active_at: Optional[float] = None
+        self._cpu_idle_at: Optional[float] = None
 
     def _is_self(self, pid: int, cmdline: bytes = b"") -> bool:
         if pid == self._self_pid:
@@ -284,6 +292,97 @@ class ProcessDetector:
 
     def invalidate(self):
         self._cache = None
+
+    # ── CPU 活动检测（用于实时状态判断） ──
+
+    def _get_hermes_pid_list(self) -> list[int]:
+        """获取当前 Hermes 进程的 PID 列表。"""
+        pids = []
+        for name in _HERMES_EXE_NAMES:
+            try:
+                out = subprocess.run(
+                    ["tasklist", "/FI", f"IMAGENAME eq {name.decode()}", "/FO", "CSV", "/NH"],
+                    capture_output=True, timeout=5,
+                    creationflags=subprocess.CREATE_NO_WINDOW,
+                ).stdout
+                for line in out.splitlines():
+                    parts = line.decode("utf-8", errors="replace").split(",")
+                    if len(parts) >= 2:
+                        try:
+                            pid = int(parts[1].strip().strip('"'))
+                            if pid != self._self_pid:
+                                pids.append(pid)
+                        except ValueError:
+                            pass
+            except Exception:
+                pass
+        return pids
+
+    def _get_cpu_seconds(self, pids: list[int]) -> dict[int, float]:
+        """通过 wmic 获取指定 PID 的 CPU 时间（秒）。"""
+        cpu = {}
+        for pid in pids:
+            try:
+                out = subprocess.run(
+                    ["wmic", "process", "where", f"processid={pid}",
+                     "get", "KernelModeTime,UserModeTime", "/format:csv"],
+                    capture_output=True, timeout=3,
+                    creationflags=subprocess.CREATE_NO_WINDOW,
+                ).stdout
+                for line in out.splitlines():
+                    parts = line.decode("utf-8", errors="replace").split(",")
+                    if len(parts) >= 2:
+                        kt = int(parts[-2].strip()) if parts[-2].strip().isdigit() else 0
+                        ut = int(parts[-1].strip()) if parts[-1].strip().isdigit() else 0
+                        cpu[pid] = (kt + ut) / 10_000_000  # 100ns → seconds
+                        break
+            except Exception:
+                pass
+        return cpu
+
+    def check_cpu_active(self) -> Optional[bool]:
+        """检查 Hermes 进程 CPU 是否活跃。
+        
+        Returns:
+            True  → CPU 活跃（正在工作）
+            False → CPU 空闲（等待/挂起）
+            None  → 无法检测
+        """
+        now = time.time()
+        pids = self._get_hermes_pid_list()
+        if not pids:
+            self._cpu_active_at = None
+            self._cpu_idle_at = None
+            return None
+
+        cpu_now = self._get_cpu_seconds(pids)
+        if not cpu_now:
+            return None
+
+        # 检查是否有任何 Hermes 进程的 CPU 时间在增长
+        active = False
+        for pid, secs in cpu_now.items():
+            prev = self._prev_cpu.get(pid, secs)
+            diff = secs - prev
+            if diff > 0.01:  # CPU 时间增长超过 10ms → 活跃
+                active = True
+
+        self._prev_cpu = cpu_now
+
+        if active:
+            self._cpu_active_at = now
+            self._cpu_idle_at = None
+            return True
+        else:
+            if self._cpu_idle_at is None:
+                self._cpu_idle_at = now
+            return False
+
+    def cpu_idle_seconds(self) -> Optional[float]:
+        """返回 Hermes 进程已空闲的秒数。"""
+        if self._cpu_idle_at is not None:
+            return time.time() - self._cpu_idle_at
+        return None
 
 
 class StateDB:
@@ -402,21 +501,24 @@ def _check_api() -> Optional[str]:
 def _determine_status(proc: ProcessDetector, db: StateDB, allow_deep: bool = False) -> str:
     """状态机: 标准红绿灯语义 — 🔴=执行中 🟡=等用户 🟢=空闲。
 
-    判断优先级:
-      1. 进程未运行 / 无会话 / 无消息 → 绿
-      2. clarify 工具调用中（assistant + clarify）/ 返回后（tool=clarify）→ 🟡 黄灯
-      3. API Server busy → 🔴 红灯
-      4. assistant + 其他 tool_calls → 🔴 红灯
-      5. tool / system → 🔴 红灯
-      6. user 且 30s 内 → 🔴 红灯
-      7. 其他（assistant 无 tool_calls = 回答完毕）→ 🟢 绿灯
+    结合 state.db 消息检测 + CPU 活动检测：
+      - state.db 实时反映已完成 turn 的状态（消息级别的检测）
+      - CPU 监控捕获 state.db 未刷新的实时状态（如 clarify 等待期间）
 
-    注意: clarify 判黄必须在 API busy 之前，
-          因为 clarify 运行时 Hermes API 也会返回 busy。
+    判断优先级:
+      1. 进程未运行 / 无会话 → 绿
+      2. state.db 消息级别检测（已完成 turn 的数据）
+         - assistant + clarify → 🟡
+         - tool + clarify → 🟡
+         - assistant + 其他 tc / tool / system / user <30s → 🔴
+      3. CPU 活动检测（实时，捕获 state.db 未刷新场景）
+         - CPU 活跃 → 🔴（正在工作但 state.db 还未提交）
+         - CPU 空闲 <30s → 🟡（等用户，如 clarify 选项展示中）
+         - CPU 空闲 >30s / 无法检测 → 🟢（真正空闲）
     """
     now = time.time()
 
-    # 1. 进程检测（快检）
+    # 1. 进程检测
     if not proc.present(allow_deep=allow_deep):
         return "green"
 
@@ -425,40 +527,52 @@ def _determine_status(proc: ProcessDetector, db: StateDB, allow_deep: bool = Fal
     if sess is None or sess["ea"] is not None:
         return "green"
 
-    # 3. 最后一条消息
+    # 3. state.db 消息级别检测
     msg = db.last_msg(sess["id"])
-    if msg is None:
-        return "green"
+    if msg is not None:
+        role = msg["role"]
+        age = now - msg["ts"]
+        tc_list = _parse_tool_calls(msg.get("tc"))
+        has_tc = len(tc_list) > 0
+        tn = msg.get("tn") or ""
 
-    role = msg["role"]
-    age = now - msg["ts"]
-    tc_list = _parse_tool_calls(msg.get("tc"))
-    has_tc = len(tc_list) > 0
-    tn = msg.get("tn") or ""  # tool_name
+        log.debug("DB: role=%s age=%.0fs tc=%d tn=%s", role, age, len(tc_list), tn)
 
-    log.debug("判断: role=%s age=%.0fs tc=%d tn=%s", role, age, len(tc_list), tn)
+        # 🟡 黄灯（DB 已刷新场景）
+        if role == "assistant" and has_tc and _has_clarify_tool(tc_list):
+            return "yellow"
+        if role == "tool" and tn == "clarify":
+            return "yellow"
 
-    # 🟡 黄灯: 等用户确认（优先于 API busy，因为 clarify 执行时 API 也 busy）
-    if role == "assistant" and has_tc and _has_clarify_tool(tc_list):
+        # 🔴 红灯（DB 已刷新场景）
+        if role == "assistant" and has_tc:
+            return "red"
+        if role in ("tool", "system"):
+            return "red"
+        if role == "user" and age < 30:
+            return "red"
+
+    # 4. 实时 CPU 检测（DB 未刷新场景 — 如 clarify 等待期间）
+    #    此时 state.db 显示空闲，但 Hermes 进程正在运行
+    cpu_active = proc.check_cpu_active()
+    if cpu_active is True:
+        # CPU 活跃 → 正在工作但 state.db 还未提交
+        return "red"
+
+    # CPU 空闲: 检查 CPU 上次活跃时间
+    # 如果刚活跃过然后变空闲 → mid-turn 等待中（clarify等）
+    # 如果很久没活跃了 → 两轮对话之间，真正空闲
+    cpu_active_at = proc._cpu_active_at
+    if cpu_active_at is not None and (now - cpu_active_at) < 60:
+        # 60s 内 CPU 活跃过 → agent 在中间等待（clarify / 等用户确认）
         return "yellow"
-    # 工具已返回且是 clarify → 用户仍在看选项/等点击
-    if role == "tool" and tn == "clarify":
-        return "yellow"
 
-    # 4. API Server（快速检测整体忙碌状态）
+    # 5. API Server 快速检测
     api = _check_api()
     if api == "busy":
         return "red"
 
-    # 🔴 红灯: 正在执行
-    if role == "assistant" and has_tc:
-        return "red"
-    if role in ("tool", "system"):
-        return "red"
-    if role == "user" and age < 30:
-        return "red"
-
-    # 🟢 绿灯: 空闲
+    # 🟢 绿灯
     return "green"
 
 
