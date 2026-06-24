@@ -331,9 +331,10 @@ class ProcessDetector:
                 ).stdout
                 for line in out.splitlines():
                     parts = line.decode("utf-8", errors="replace").split(",")
-                    if len(parts) >= 2:
-                        kt = int(parts[-2].strip()) if parts[-2].strip().isdigit() else 0
-                        ut = int(parts[-1].strip()) if parts[-1].strip().isdigit() else 0
+                    # 跳过标题行和空行 — 只有数字行才是有效数据
+                    if len(parts) >= 3 and parts[-2].strip().isdigit() and parts[-1].strip().isdigit():
+                        kt = int(parts[-2].strip())
+                        ut = int(parts[-1].strip())
                         cpu[pid] = (kt + ut) / 10_000_000  # 100ns → seconds
                         break
             except Exception:
