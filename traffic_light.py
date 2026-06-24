@@ -330,12 +330,12 @@ class StateDB:
         try:
             self._ensure()
             row = self._conn.execute(
-                """SELECT role, content, tool_call_id, tool_calls, timestamp
+                """SELECT role, content, tool_call_id, tool_calls, timestamp, tool_name
                      FROM messages WHERE session_id = ?
                      ORDER BY id DESC LIMIT 1""", (sid,)
             ).fetchone()
             if row:
-                return dict(zip(("role", "ct", "tcid", "tc", "ts"), row))
+                return dict(zip(("role", "ct", "tcid", "tc", "ts", "tn"), row))
         except Exception:
             pass
         return None
@@ -403,32 +403,29 @@ def _determine_status(proc: ProcessDetector, db: StateDB, allow_deep: bool = Fal
     """状态机: 标准红绿灯语义 — 🔴=执行中 🟡=等用户 🟢=空闲。
 
     判断优先级:
-      1. API Server busy → 🔴 红灯
-      2. Hermes 未运行 → 🟢 绿灯（未工作 = 空闲）
-      3. 无活跃会话 → 🟢 绿灯
-      4. assistant + clarify → 🟡 黄灯（等用户确认）
-      5. assistant + 其他 tool_calls → 🔴 红灯（正在调工具）
-      6. tool / system → 🔴 红灯（工具返回，agent 在处理）
-      7. user 且 30s 内 → 🔴 红灯（刚发消息，即将处理）
-      8. 其他（assistant 无 tool_calls = 回答完毕）→ 🟢 绿灯
+      1. 进程未运行 / 无会话 / 无消息 → 绿
+      2. clarify 工具调用中（assistant + clarify）/ 返回后（tool=clarify）→ 🟡 黄灯
+      3. API Server busy → 🔴 红灯
+      4. assistant + 其他 tool_calls → 🔴 红灯
+      5. tool / system → 🔴 红灯
+      6. user 且 30s 内 → 🔴 红灯
+      7. 其他（assistant 无 tool_calls = 回答完毕）→ 🟢 绿灯
+
+    注意: clarify 判黄必须在 API busy 之前，
+          因为 clarify 运行时 Hermes API 也会返回 busy。
     """
     now = time.time()
 
-    # 1. API Server
-    api = _check_api()
-    if api == "busy":
-        return "red"
-
-    # 2. 进程检测
+    # 1. 进程检测（快检）
     if not proc.present(allow_deep=allow_deep):
         return "green"
 
-    # 3. 活跃会话
+    # 2. 活跃会话
     sess = db.get_active_session()
     if sess is None or sess["ea"] is not None:
         return "green"
 
-    # 4. 最后一条消息
+    # 3. 最后一条消息
     msg = db.last_msg(sess["id"])
     if msg is None:
         return "green"
@@ -437,12 +434,21 @@ def _determine_status(proc: ProcessDetector, db: StateDB, allow_deep: bool = Fal
     age = now - msg["ts"]
     tc_list = _parse_tool_calls(msg.get("tc"))
     has_tc = len(tc_list) > 0
+    tn = msg.get("tn") or ""  # tool_name
 
-    log.debug("判断: role=%s age=%.0fs tc=%d", role, age, len(tc_list))
+    log.debug("判断: role=%s age=%.0fs tc=%d tn=%s", role, age, len(tc_list), tn)
 
-    # 🟡 黄灯: 等用户确认
+    # 🟡 黄灯: 等用户确认（优先于 API busy，因为 clarify 执行时 API 也 busy）
     if role == "assistant" and has_tc and _has_clarify_tool(tc_list):
         return "yellow"
+    # 工具已返回且是 clarify → 用户仍在看选项/等点击
+    if role == "tool" and tn == "clarify":
+        return "yellow"
+
+    # 4. API Server（快速检测整体忙碌状态）
+    api = _check_api()
+    if api == "busy":
+        return "red"
 
     # 🔴 红灯: 正在执行
     if role == "assistant" and has_tc:
@@ -452,7 +458,7 @@ def _determine_status(proc: ProcessDetector, db: StateDB, allow_deep: bool = Fal
     if role == "user" and age < 30:
         return "red"
 
-    # 🟢 绿灯: 空闲（回答完毕、无会话、离线等）
+    # 🟢 绿灯: 空闲
     return "green"
 
 

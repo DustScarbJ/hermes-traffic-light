@@ -92,8 +92,8 @@ hermes_traffic_light/
 ├── traffic_light.py     ← 主程序（系统托盘 + Web 服务器）
 ├── diagnose.py          ← 环境诊断工具
 ├── README.md            ← 本文档
-├── start.bat            ← 快捷启动
-├── 启动并暂停.bat         ← 带提示的启动
+├── start.bat            ← 快捷启动（后台静默）
+├── start_interactive.bat    ← 带提示的交互式启动
 ├── diagnose.bat         ← 快速诊断
 ├── .gitignore
 └── traffic_light.log    ← 运行日志（自动生成）
@@ -183,8 +183,8 @@ hermes_traffic_light/
 ├── traffic_light.py     ← Main program (tray + web server)
 ├── diagnose.py          ← Diagnostic tool
 ├── README.md            ← This file
-├── start.bat            ← Quick launcher
-├── 启动并暂停.bat         ← Launcher with prompt
+├── start.bat            ← Quick launcher (silent)
+├── start_interactive.bat    ← Launcher with prompt
 ├── diagnose.bat         ← Quick diagnostic
 ├── .gitignore
 └── traffic_light.log    ← Runtime log (auto-generated)
@@ -255,8 +255,8 @@ hermes_traffic_light/
 ├── traffic_light.py     ← メインプログラム（トレイ + Web サーバー）
 ├── diagnose.py          ← 診断ツール
 ├── README.md            ← このファイル
-├── start.bat            ← クイック起動
-├── 启动并暂停.bat         ← 確認付き起動
+├── start.bat            ← クイック起動（サイレント）
+├── start_interactive.bat    ← 確認付き起動
 ├── diagnose.bat         ← クイック診断
 ├── .gitignore
 └── traffic_light.log    ← 実行ログ（自動生成）
