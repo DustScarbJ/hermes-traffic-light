@@ -1,0 +1,74 @@
+
+=== 2026-06-24 14:41:55 START ===
+
+=== 2026-06-24 14:45:48 START ===
+[14:45:48] main() called
+[14:45:48] app init start
+[14:45:48] app created, entering event loop
+[14:48:49] app quit
+
+=== 2026-06-24 14:54:28 START ===
+[14:54:28] main() called
+[14:54:28] app init start
+[14:54:28] app created, entering event loop
+15:47:05 [INFO] ==================================================
+15:47:05 [INFO] 启动… Python 3.11.15 PID=60808
+15:47:05 [INFO] PyQt6 OK
+15:47:05 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+15:47:05 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+15:48:22 [INFO] ==================================================
+15:48:22 [INFO] 启动… Python 3.11.15 PID=56004
+15:48:22 [INFO] PyQt6 OK
+15:48:22 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+15:48:22 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+15:48:22 [INFO] main() PID=56004
+15:48:22 [INFO] GUI 初始化…
+15:48:22 [INFO] GUI 就绪
+15:48:22 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+15:48:22 [INFO] 轮询线程已启动 (间隔 1.5s)
+15:48:22 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+15:48:29 [INFO] 状态 → 🔴 空闲
+15:48:56 [INFO] 打开浏览器: http://127.0.0.1:19876
+15:50:18 [INFO] 状态 → 🟢 正在执行
+15:50:49 [INFO] 状态 → 🔴 空闲
+15:58:19 [INFO] 状态 → 🟢 正在执行
+15:58:48 [INFO] 状态 → 🔴 空闲
+15:59:06 [INFO] 状态 → 🟢 正在执行
+15:59:36 [INFO] 状态 → 🔴 空闲
+16:00:06 [INFO] 状态 → 🟢 正在执行
+16:00:36 [INFO] 状态 → 🔴 空闲
+16:01:35 [INFO] ==================================================
+16:01:35 [INFO] 启动… Python 3.11.15 PID=27904
+16:01:35 [INFO] PyQt6 OK
+16:01:35 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+16:01:35 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+16:01:40 [INFO] ==================================================
+16:01:40 [INFO] 启动… Python 3.11.15 PID=62620
+16:01:40 [INFO] PyQt6 OK
+16:01:40 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+16:01:40 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+16:01:40 [INFO] main() PID=62620
+16:01:40 [INFO] GUI 初始化…
+16:01:40 [INFO] GUI 就绪
+16:01:40 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+16:01:40 [INFO] 轮询线程已启动 (间隔 1.5s)
+16:01:40 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+16:01:43 [INFO] 状态 → 🟢 空闲
+16:03:30 [INFO] 开机自启已启用
+16:03:30 [INFO] 开机自启: 启用
+16:04:10 [INFO] 状态 → 🔴 正在执行
+16:04:21 [INFO] 状态 → 🟢 空闲
+16:04:31 [INFO] 状态 → 🔴 正在执行
+16:04:36 [INFO] ==================================================
+16:04:36 [INFO] 启动… Python 3.11.15 PID=62728
+16:04:36 [INFO] PyQt6 OK
+16:04:36 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+16:04:36 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+16:04:36 [INFO] main() PID=62728
+16:04:36 [INFO] GUI 初始化…
+16:04:36 [INFO] GUI 就绪
+16:04:36 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+16:04:36 [INFO] 轮询线程已启动 (间隔 1.5s)
+16:04:36 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+16:04:39 [INFO] 状态 → 🔴 正在执行
+16:04:39 [INFO] 退出中…
