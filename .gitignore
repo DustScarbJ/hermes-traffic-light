@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.py[co]
+
+# Logs
+*.log
+traffic_light.log
+
+# Temp / build
+*.tmp
+_repo.json
+_gh_*.py
+_gh_*.sh
+_create*.py
+_create*.sh
+_make_repo.py
+_mk_repo.py
+_parse.py
+_parse_gh.py
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
