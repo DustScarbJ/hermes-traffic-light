@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚦 Hermes Traffic Light
+# 🚦 Hermes Traffic Light-系统托盘红绿灯
 
 **🚦系统托盘红绿灯 · 实时监控 Hermes Agent 工作状态**
 
