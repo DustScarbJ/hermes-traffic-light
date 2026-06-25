@@ -23,6 +23,7 @@ import sys
 import threading
 import time
 import urllib.request
+import queue
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from pathlib import Path
 from typing import Optional
@@ -31,7 +32,13 @@ from typing import Optional
 #  日志
 # ═══════════════════════════════════════════════════════════
 
-LOG_PATH = Path(__file__).parent / "traffic_light.log"
+# 支持 PyInstaller 冻结模式
+if getattr(sys, 'frozen', False):
+    APP_DIR = Path(os.path.dirname(os.path.abspath(sys.executable)))
+else:
+    APP_DIR = Path(__file__).parent
+
+LOG_PATH = APP_DIR / "traffic_light.log"
 
 logging.basicConfig(
     level=logging.INFO,
@@ -68,6 +75,7 @@ if not _HERMES_HOME.exists():
 STATE_DB = _HERMES_HOME / "state.db"
 API_HOST, API_PORT = "127.0.0.1", 8642
 WEB_PORT = 19876
+UDP_PORT = 18888           # Hermes Plugin 实时事件端口
 POLL_MS = 1500
 PROC_CACHE_SECS = 6
 DEEP_INTERVAL = 4
@@ -138,10 +146,10 @@ _HTML_PAGE = r"""<!DOCTYPE html>
 <script>
   let current = 'off';
   const STATUS = {
-    red:    { icon: '🔴', text: 'Hermes 正在执行任务', title: '正在执行' },
-    yellow: { icon: '🟡', text: '等待用户确认或输入',  title: '等待用户' },
-    green:  { icon: '🟢', text: '空闲中，等待下一个任务',title: '空闲' },
-    off:    { icon: '⚫', text: 'Hermes 未检测到',    title: '离线' },
+    red:    { icon: '🔴', text: 'Hermes 空闲中',        title: '已停止' },
+    green:  { icon: '🟢', text: 'Hermes 正在执行任务',  title: '正在运行' },
+    yellow: { icon: '🟡', text: '等待用户操作',          title: '需要操作' },
+    off:    { icon: '⚫', text: 'Hermes 未检测到',       title: '离线' },
   };
   async function poll() {
     try {
@@ -218,9 +226,6 @@ class ProcessDetector:
         self._cache: Optional[bool] = None
         self._cache_at: float = 0.0
         self._self_pid = os.getpid()
-        self._prev_cpu: dict[int, float] = {}
-        self._cpu_active_at: Optional[float] = None
-        self._cpu_idle_at: Optional[float] = None
 
     def _is_self(self, pid: int, cmdline: bytes = b"") -> bool:
         if pid == self._self_pid:
@@ -293,98 +298,6 @@ class ProcessDetector:
     def invalidate(self):
         self._cache = None
 
-    # ── CPU 活动检测（用于实时状态判断） ──
-
-    def _get_hermes_pid_list(self) -> list[int]:
-        """获取当前 Hermes 进程的 PID 列表。"""
-        pids = []
-        for name in _HERMES_EXE_NAMES:
-            try:
-                out = subprocess.run(
-                    ["tasklist", "/FI", f"IMAGENAME eq {name.decode()}", "/FO", "CSV", "/NH"],
-                    capture_output=True, timeout=5,
-                    creationflags=subprocess.CREATE_NO_WINDOW,
-                ).stdout
-                for line in out.splitlines():
-                    parts = line.decode("utf-8", errors="replace").split(",")
-                    if len(parts) >= 2:
-                        try:
-                            pid = int(parts[1].strip().strip('"'))
-                            if pid != self._self_pid:
-                                pids.append(pid)
-                        except ValueError:
-                            pass
-            except Exception:
-                pass
-        return pids
-
-    def _get_cpu_seconds(self, pids: list[int]) -> dict[int, float]:
-        """通过 wmic 获取指定 PID 的 CPU 时间（秒）。"""
-        cpu = {}
-        for pid in pids:
-            try:
-                out = subprocess.run(
-                    ["wmic", "process", "where", f"processid={pid}",
-                     "get", "KernelModeTime,UserModeTime", "/format:csv"],
-                    capture_output=True, timeout=3,
-                    creationflags=subprocess.CREATE_NO_WINDOW,
-                ).stdout
-                for line in out.splitlines():
-                    parts = line.decode("utf-8", errors="replace").split(",")
-                    # 跳过标题行和空行 — 只有数字行才是有效数据
-                    if len(parts) >= 3 and parts[-2].strip().isdigit() and parts[-1].strip().isdigit():
-                        kt = int(parts[-2].strip())
-                        ut = int(parts[-1].strip())
-                        cpu[pid] = (kt + ut) / 10_000_000  # 100ns → seconds
-                        break
-            except Exception:
-                pass
-        return cpu
-
-    def check_cpu_active(self) -> Optional[bool]:
-        """检查 Hermes 进程 CPU 是否活跃。
-        
-        Returns:
-            True  → CPU 活跃（正在工作）
-            False → CPU 空闲（等待/挂起）
-            None  → 无法检测
-        """
-        now = time.time()
-        pids = self._get_hermes_pid_list()
-        if not pids:
-            self._cpu_active_at = None
-            self._cpu_idle_at = None
-            return None
-
-        cpu_now = self._get_cpu_seconds(pids)
-        if not cpu_now:
-            return None
-
-        # 检查是否有任何 Hermes 进程的 CPU 时间在增长
-        active = False
-        for pid, secs in cpu_now.items():
-            prev = self._prev_cpu.get(pid, secs)
-            diff = secs - prev
-            if diff > 0.01:  # CPU 时间增长超过 10ms → 活跃
-                active = True
-
-        self._prev_cpu = cpu_now
-
-        if active:
-            self._cpu_active_at = now
-            self._cpu_idle_at = None
-            return True
-        else:
-            if self._cpu_idle_at is None:
-                self._cpu_idle_at = now
-            return False
-
-    def cpu_idle_seconds(self) -> Optional[float]:
-        """返回 Hermes 进程已空闲的秒数。"""
-        if self._cpu_idle_at is not None:
-            return time.time() - self._cpu_idle_at
-        return None
-
 
 class StateDB:
     def __init__(self):
@@ -413,15 +326,16 @@ class StateDB:
         try:
             self._ensure()
             rows = self._conn.execute(
-                """SELECT id, started_at, ended_at, end_reason, title, message_count
+                """SELECT id, started_at, ended_at, end_reason, title, message_count,
+                          tool_call_count, api_call_count
                      FROM sessions WHERE archived = 0
                      ORDER BY started_at DESC LIMIT 10"""
             ).fetchall()
             for r in rows:
                 if r[2] is None:
-                    return dict(zip(("id", "sa", "ea", "er", "ti", "mc"), r))
+                    return dict(zip(("id", "sa", "ea", "er", "ti", "mc", "tcc", "acc"), r))
             if rows:
-                return dict(zip(("id", "sa", "ea", "er", "ti", "mc"), rows[0]))
+                return dict(zip(("id", "sa", "ea", "er", "ti", "mc", "tcc", "acc"), rows[0]))
         except Exception:
             pass
         return None
@@ -473,108 +387,384 @@ def _parse_tool_calls(raw) -> list:
     return []
 
 
-def _has_clarify_tool(tool_calls: list) -> bool:
-    for tc in tool_calls:
-        if isinstance(tc, dict):
-            name = tc.get("function", {}).get("name", "") or tc.get("name", "")
-            if name.lower() == "clarify":
-                return True
-    return False
+# ═══════════════════════════════════════════════════════════
+#  事件总线 + 事件驱动 FSM
+# ═══════════════════════════════════════════════════════════
+
+from enum import Enum
+from typing import Callable, Any
+
+class FsmState(Enum):
+    OFFLINE = "offline"
+    RUNNING = "running"
+    WAIT_USER = "wait_user"
+    IDLE = "idle"
+
+FSM_TO_LIGHT = {
+    FsmState.OFFLINE: "yellow",
+    FsmState.RUNNING: "green",
+    FsmState.WAIT_USER: "yellow",
+    FsmState.IDLE: "red",
+}
+FSM_BLINK = {
+    FsmState.OFFLINE: 0,
+    FsmState.RUNNING: 0,
+    FsmState.WAIT_USER: 400,
+    FsmState.IDLE: 0,
+}
+FSM_LABELS = {
+    FsmState.OFFLINE: "🟡 离线",
+    FsmState.RUNNING: "🟢 正在运行",
+    FsmState.WAIT_USER: "🟡 需要操作",
+    FsmState.IDLE: "🔴 已停止",
+}
+FSM_TIPS = {
+    FsmState.OFFLINE: "Hermes Agent 未运行或无活跃会话",
+    FsmState.RUNNING: "Hermes Agent 正在执行任务",
+    FsmState.WAIT_USER: "Hermes Agent 等待用户确认或输入",
+    FsmState.IDLE: "Hermes Agent 空闲中 — 未在运行",
+}
 
 
-def _check_api() -> Optional[str]:
-    if not _port_open(API_HOST, API_PORT, 0.3):
-        return None
-    try:
-        req = urllib.request.Request(
-            f"http://{API_HOST}:{API_PORT}/health/detailed",
-            headers={"Accept": "application/json"},
-        )
-        with urllib.request.urlopen(req, timeout=1) as r:
-            d = json.loads(r.read().decode())
-            if d.get("active_agents", 0) > 0 or d.get("gateway_busy", False):
-                return "busy"
-            return "idle"
-    except Exception:
-        return None
+# 全局外部事件队列 + 双源时钟锁
+_external_event_queue: queue.Queue = queue.Queue()
+_ui_last_event_at: float = 0.0          # 最近一次 UI 事件时间戳
+_ui_immunity_secs: float = 2.0           # UI 事件后免疫 DB 事件的窗口
+_ui_immunity_lock: threading.Lock = threading.Lock()
 
 
-def _determine_status(proc: ProcessDetector, db: StateDB, allow_deep: bool = False) -> str:
-    """状态机: 标准红绿灯语义 — 🔴=执行中 🟡=等用户 🟢=空闲。
+def _ui_immune() -> bool:
+    """检查当前是否在 UI 免疫窗口内。"""
+    with _ui_immunity_lock:
+        return (time.time() - _ui_last_event_at) < _ui_immunity_secs
 
-    结合 state.db 消息检测 + CPU 活动检测：
-      - state.db 实时反映已完成 turn 的状态（消息级别的检测）
-      - CPU 监控捕获 state.db 未刷新的实时状态（如 clarify 等待期间）
 
-    判断优先级:
-      1. 进程未运行 / 无会话 → 绿
-      2. state.db 消息级别检测（已完成 turn 的数据）
-         - assistant + clarify → 🟡
-         - tool + clarify → 🟡
-         - assistant + 其他 tc / tool / system / user <30s → 🔴
-      3. CPU 活动检测（实时，捕获 state.db 未刷新场景）
-         - CPU 活跃 → 🔴（正在工作但 state.db 还未提交）
-         - CPU 空闲 <30s → 🟡（等用户，如 clarify 选项展示中）
-         - CPU 空闲 >30s / 无法检测 → 🟢（真正空闲）
+def start_http_receiver():
+    """守护线程：HTTP POST 端点 :18888，接收 Hermes UI Observer 的实时事件。
+
+    UI Observer 发 POST /event:
+      {"event":"busy",         "source":"ui", "ts":...}
+      {"event":"needs_input",  "source":"ui", "ts":...}
+      {"event":"idle",         "source":"ui", "ts":...}
+      {"event":"session_end",  "source":"ui", "ts":...}
+
+    Plugin 也可用同一端点（source="plugin"）。
     """
+    from http.server import HTTPServer, BaseHTTPRequestHandler
+
+    class EventHandler(BaseHTTPRequestHandler):
+        def do_POST(self):
+            global _ui_last_event_at
+            # CORS 头（允许任意来源的 fetch）
+            self.send_response(200)
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.send_header("Access-Control-Allow-Methods", "POST, OPTIONS")
+            self.send_header("Access-Control-Allow-Headers", "Content-Type")
+            self.end_headers()
+            try:
+                length = int(self.headers.get("Content-Length", 0))
+                raw = self.rfile.read(length)
+                payload = json.loads(raw.decode("utf-8", errors="replace"))
+
+                ev = payload.get("event", "")
+                source = payload.get("source", "unknown")
+                detail = payload.get("detail", {})
+
+                if source == "ui":
+                    with _ui_immunity_lock:
+                        _ui_last_event_at = time.time()
+
+                log.info("HTTP ← event=%s source=%s detail=%s", ev, source, detail)
+                _external_event_queue.put(payload)
+                self.wfile.write(b'{"ok":true}')
+            except Exception as e:
+                log.warning("HTTP 处理异常: %s", e)
+                try:
+                    self.wfile.write(b'{"ok":false}')
+                except Exception:
+                    pass
+
+        def do_OPTIONS(self):
+            """预检请求 CORS。"""
+            self.send_response(204)
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.send_header("Access-Control-Allow-Methods", "POST, OPTIONS")
+            self.send_header("Access-Control-Allow-Headers", "Content-Type")
+            self.end_headers()
+
+        def log_message(self, *a):
+            pass  # 静默日志
+
+    srv = HTTPServer(("127.0.0.1", UDP_PORT), EventHandler)
+    srv.timeout = 1.0
+    log.info("HTTP 事件接收器已启动 → http://127.0.0.1:%d/event", UDP_PORT)
+
+    while True:
+        try:
+            srv.handle_request()
+        except TimeoutError:
+            continue
+        except Exception as e:
+            log.error("HTTP 接收异常: %s", e)
+            break
+
+
+class HermesEventBus:
+    """轻量事件总线 — Runtime → Event → FSM → UI."""
+
+    def __init__(self):
+        self._subs: dict[str, list[Callable]] = {}
+
+    def on(self, event: str, cb: Callable):
+        self._subs.setdefault(event, []).append(cb)
+
+    def emit(self, event: str, data: dict | None = None):
+        for cb in self._subs.get(event, []):
+            try:
+                cb(data or {})
+            except Exception as e:
+                log.error("Event[%s] handler error: %s", event, e)
+
+
+class EventFSM:
+    """FSM 不再 poll DB，只接收事件总线的事实。
+
+    双源时钟锁:
+      - UI 事件（source="ui"）来自 DOM MutationObserver → 绝对实时、最高优先级
+      - DB 事件（从 DbEventSource 来）有 2s 免疫窗口 → 若 UI 刚发过事件则忽略
+      - 这修复了「第 5 项 Bug」：DB 回放过期事件覆盖 UI 实时状态
+    """
+
+    def __init__(self, bus: HermesEventBus):
+        self._state: FsmState = FsmState.IDLE
+        # 注册所有事件
+        for ev in ("session_start", "session_end", "offline", "online",
+                    "tool_start", "tool_end", "clarify_request",
+                    "message_user", "message_assistant",
+                    "busy", "idle", "needs_input"):
+            bus.on(ev, lambda d, e=ev: self._handle(e, d))
+
+    def _handle(self, event: str, data: dict | None):
+        """统一事件处理器，含双源时钟锁。"""
+        data = data or {}
+        source = data.get("source", "db")
+
+        # ── 免疫锁：DB 源事件在 UI 免疫窗口内 → 忽略 ──
+        if source == "db" and _ui_immune():
+            log.debug("FSM: immune → ignore db event=%s", event)
+            return
+
+        # ── 状态转换 ──
+        if event in ("session_end", "offline"):
+            self._state = FsmState.OFFLINE
+            log.info("FSEvent: OFFLINE (%s)", event)
+
+        elif event == "online":
+            if self._state == FsmState.OFFLINE:
+                self._state = FsmState.IDLE
+                log.info("FSEvent: IDLE (online)")
+
+        elif event == "session_start":
+            self._state = FsmState.IDLE
+            log.info("FSEvent: IDLE (session start)")
+
+        elif event in ("tool_start", "busy"):
+            self._state = FsmState.RUNNING
+            log.info("FSEvent: RUNNING (%s%s)", event,
+                     f" tool={data.get('tool_name','?')}" if event == "tool_start" else "")
+
+        elif event == "tool_end":
+            if self._state == FsmState.RUNNING:
+                self._state = FsmState.IDLE
+                log.info("FSEvent: IDLE (tool end)")
+
+        elif event == "needs_input":
+            self._state = FsmState.WAIT_USER
+            log.info("FSEvent: WAIT_USER (needs_input)")
+
+        elif event == "clarify_request":
+            self._state = FsmState.WAIT_USER
+            log.info("FSEvent: WAIT_USER (clarify)")
+
+        elif event == "idle":
+            # UI 说空闲了，只有当前不是 OFFLINE 时覆盖
+            if self._state != FsmState.OFFLINE:
+                self._state = FsmState.IDLE
+                log.info("FSEvent: IDLE (ui idle)")
+
+        elif event == "message_user":
+            if self._state == FsmState.WAIT_USER:
+                self._state = FsmState.RUNNING
+                log.info("FSEvent: RUNNING (user msg after clarify)")
+
+    @property
+    def state(self) -> FsmState:
+        return self._state
+
+    @property
+    def light(self) -> str:
+        return FSM_TO_LIGHT.get(self._state, "green")
+
+    @property
+    def blink_ms(self) -> int:
+        return FSM_BLINK.get(self._state, 0)
+
+    @property
+    def label(self) -> str:
+        return FSM_LABELS.get(self._state, "未知")
+
+    @property
+    def tip(self) -> str:
+        return FSM_TIPS.get(self._state, "Hermes Traffic Light")
+
+
+class DbEventSource:
+    """高频读取 state.db 变化并发射事件到总线。
+
+    这是唯一接触 DB 的模块。负责将「DB 写入」翻译为「事件」。
+    写入到发射之间的延迟 = poll 间隔 (200ms)。
+
+    已知约束: Hermes Desktop 只在 turn 结束时批量写入 DB，
+    因此 tool_start/tool_end 等事件在 turn 完成前不可见。
+    这是 state.db 架构的固有延迟，非本层问题。
+    """
+
+    def __init__(self, bus: HermesEventBus, db: StateDB):
+        self._bus = bus
+        self._db = db
+        self._prev_max_id: int = 0
+        self._prev_tool_count: int = 0
+        self._prev_was_online: bool = False
+        self._initialized: bool = False
+
+    def tick(self):
+        """每次 poll 调用一次，检测变化并发射事件。"""
+        now = time.time()
+
+        # ── 进程在线检测 ──
+        online = _proc_present_check()
+        if not self._initialized:
+            self._prev_was_online = online
+        else:
+            if self._prev_was_online and not online:
+                self._bus.emit("offline", {"source": "db"})
+            elif not self._prev_was_online and online:
+                self._bus.emit("online", {"source": "db"})
+        self._prev_was_online = online
+
+        if not online:
+            self._initialized = True
+            return
+
+        # ── 会话检测 ──
+        try:
+            sess = self._db.get_active_session()
+        except Exception:
+            sess = None
+
+        if not sess or sess["ea"] is not None:
+            if self._initialized and self._prev_was_online:
+                self._bus.emit("offline", {"source": "db"})
+            self._initialized = True
+            return
+
+        sid = sess["id"]
+        max_id = self._db_max_msg_id(sid)
+        tcc = sess.get("tcc", 0)
+
+        if not self._initialized:
+            self._prev_max_id = max_id
+            self._prev_tool_count = tcc
+            self._initialized = True
+            self._bus.emit("session_start", {"source": "db"})
+            return
+
+        # ── max_id 增长 → 新消息写入 ──
+        if max_id > self._prev_max_id:
+            self._emit_new_msg_events(sid, self._prev_max_id, max_id)
+
+        # ── tool_count 增长 → 工具调用 ──
+        if tcc > self._prev_tool_count:
+            self._bus.emit("tool_end", {"source": "db"})  # turn 结束
+            if self._prev_max_id < max_id:
+                pass  # _emit_new_msg_events 已处理 tool_start
+            else:
+                pass
+            # 因为 tool_count 和 max_id 同时更新（batch），
+            # tool_start 由 _emit_new_msg_events 在新消息中检测
+
+        self._prev_max_id = max_id
+        self._prev_tool_count = tcc
+
+    def _emit_new_msg_events(self, sid: str, from_id: int, to_id: int):
+        """读取增量消息，为每条消息发射对应事件。"""
+        try:
+            self._db._ensure()
+            rows = self._db._conn.execute(
+                """SELECT id, role, tool_name, tool_calls
+                   FROM messages WHERE session_id = ? AND id > ? AND id <= ?
+                   ORDER BY id""",
+                (sid, from_id, to_id),
+            ).fetchall()
+        except Exception:
+            return
+
+        for row in rows:
+            msg_id, role, tn, tc_raw = row
+            data = {"id": msg_id, "source": "db"}
+
+            if role == "user":
+                self._bus.emit("message_user", data)
+                continue
+
+            # 检查助理消息的工具调用
+            if role == "assistant" and tc_raw and tc_raw.strip() not in ("", "[]", "{}"):
+                try:
+                    tc_list = json.loads(tc_raw)
+                    if isinstance(tc_list, dict):
+                        tc_list = [tc_list]
+                    for tc in tc_list:
+                        name = tc.get("function", {}).get("name", "") or tc.get("name", "")
+                        if name and name.lower() == "clarify":
+                            self._bus.emit("clarify_request", {"name": "clarify", "source": "db"})
+                        elif name:
+                            self._bus.emit("tool_start", {"name": name, "source": "db"})
+                except Exception:
+                    pass
+
+            # 助理发送纯文本
+            if role == "assistant" and (not tc_raw or tc_raw in ("", "[]", "{}")):
+                self._bus.emit("message_assistant", data)
+
+            # 工具返回
+            if role == "tool":
+                self._bus.emit("tool_end", {"name": tn or "?", "source": "db"})
+
+    def _db_max_msg_id(self, sid: str) -> int:
+        try:
+            self._db._ensure()
+            row = self._db._conn.execute(
+                "SELECT MAX(id) FROM messages WHERE session_id = ?", (sid,)
+            ).fetchone()
+            return row[0] or 0
+        except Exception:
+            return 0
+
+
+# 缓存 proc 检测结果（每 3 秒刷新一次）
+_proc_cache: tuple[float, bool] = (0.0, False)
+
+def _proc_present_check() -> bool:
+    global _proc_cache
     now = time.time()
-
-    # 1. 进程检测
-    if not proc.present(allow_deep=allow_deep):
-        return "green"
-
-    # 2. 活跃会话
-    sess = db.get_active_session()
-    if sess is None or sess["ea"] is not None:
-        return "green"
-
-    # 3. state.db 消息级别检测
-    msg = db.last_msg(sess["id"])
-    if msg is not None:
-        role = msg["role"]
-        age = now - msg["ts"]
-        tc_list = _parse_tool_calls(msg.get("tc"))
-        has_tc = len(tc_list) > 0
-        tn = msg.get("tn") or ""
-
-        log.debug("DB: role=%s age=%.0fs tc=%d tn=%s", role, age, len(tc_list), tn)
-
-        # 🟡 黄灯（DB 已刷新场景）
-        if role == "assistant" and has_tc and _has_clarify_tool(tc_list):
-            return "yellow"
-        if role == "tool" and tn == "clarify":
-            return "yellow"
-
-        # 🔴 红灯（DB 已刷新场景）
-        if role == "assistant" and has_tc:
-            return "red"
-        if role in ("tool", "system"):
-            return "red"
-        if role == "user" and age < 30:
-            return "red"
-
-    # 4. 实时 CPU 检测（DB 未刷新场景 — 如 clarify 等待期间）
-    #    此时 state.db 显示空闲，但 Hermes 进程正在运行
-    cpu_active = proc.check_cpu_active()
-    if cpu_active is True:
-        # CPU 活跃 → 正在工作但 state.db 还未提交
-        return "red"
-
-    # CPU 空闲: 检查 CPU 上次活跃时间
-    # 如果刚活跃过然后变空闲 → mid-turn 等待中（clarify等）
-    # 如果很久没活跃了 → 两轮对话之间，真正空闲
-    cpu_active_at = proc._cpu_active_at
-    if cpu_active_at is not None and (now - cpu_active_at) < 60:
-        # 60s 内 CPU 活跃过 → agent 在中间等待（clarify / 等用户确认）
-        return "yellow"
-
-    # 5. API Server 快速检测
-    api = _check_api()
-    if api == "busy":
-        return "red"
-
-    # 🟢 绿灯
-    return "green"
+    if now - _proc_cache[0] > 3.0:
+        try:
+            p = ProcessDetector()
+            present = p.present()
+        except Exception:
+            present = False
+        _proc_cache = (now, present)
+    return _proc_cache[1]
 
 
 # ═══════════════════════════════════════════════════════════
@@ -583,22 +773,6 @@ def _determine_status(proc: ProcessDetector, db: StateDB, allow_deep: bool = Fal
 
 _LIT = {"red": QColor("#ff3b30"), "yellow": QColor("#ffcc00"), "green": QColor("#34c759")}
 _DIM = {"red": QColor("#3a0a0a"), "yellow": QColor("#3a2e00"), "green": QColor("#0a2a0a")}
-
-_LABELS = {
-    "red": "🔴 正在执行",
-    "yellow": "🟡 等待用户",
-    "green": "🟢 空闲",
-    "off": "⚫ 未检测到",
-}
-_TIPS = {
-    "red": "Hermes Agent 正在执行任务",
-    "yellow": "Hermes Agent 等待用户确认或输入",
-    "green": "Hermes Agent 空闲中",
-    "off": "Hermes Agent 未检测到",
-}
-
-# 闪烁: 不同状态的 blink 间隔（ms），0 = 不闪烁
-_BLINK_MS = {"red": 800, "yellow": 400, "green": 0, "off": 0}
 
 
 def _render_icon(active: str) -> QIcon:
@@ -656,39 +830,70 @@ def _render_icon_dim(active: str) -> QIcon:
 # ═══════════════════════════════════════════════════════════
 
 class PollWorker(QObject):
-    status_changed = pyqtSignal(str)
-    _latest_state = "off"
+    status_changed = pyqtSignal(object)
+
+    def __init__(self):
+        super().__init__()
+        self._db = StateDB()
+        self._bus = HermesEventBus()
+        self._fsm = EventFSM(self._bus)
+        self._source = DbEventSource(self._bus, self._db)
+        self._proc = ProcessDetector()
 
     def start(self):
-        self._proc = ProcessDetector()
-        self._db = StateDB()
-        self._tick = 0
+        # 事件 → GUI 信号桥接
+        def on_state_change(_data=None):
+            prev = PollWorker._latest_fsm
+            PollWorker._latest_fsm = self._fsm.state
+            PollWorker._latest_light = self._fsm.light
+            if prev != self._fsm.state:
+                log.info("GUI ← %s (%s)", self._fsm.state.name, self._fsm.light)
+            self.status_changed.emit(self._fsm.state)
+
+        for ev in ("tool_start", "tool_end", "clarify_request",
+                   "message_user", "message_assistant",
+                   "session_start", "session_end",
+                   "offline", "online",
+                   "busy", "idle", "needs_input"):
+            self._bus.on(ev, on_state_change)
+
         self._timer = QTimer(self)
-        self._timer.timeout.connect(self._poll)
-        self._timer.start(POLL_MS)
-        log.info("轮询线程已启动 (间隔 %.1fs)", POLL_MS / 1000)
+        self._timer.timeout.connect(self._tick)
+        self._timer.start(200)
+        log.info("事件源已启动 (间隔 200ms)")
+
+    def _tick(self):
+        """每次 tick：先消费外部 UDP 事件，再 poll DB。"""
+        # 1. 消费外部实时事件（来自 Hermes Plugin）
+        while not _external_event_queue.empty():
+            try:
+                payload = _external_event_queue.get_nowait()
+                ev = payload.get("event", "")
+                data = {k: v for k, v in payload.items() if k != "event"}
+                # 直接注入事件总线（实时）
+                self._bus.emit(ev, data)
+            except queue.Empty:
+                break
+
+        # 2. 仍从 DB poll 增量（兜底，捕获 plugin 漏掉的事件）
+        try:
+            self._source.tick()
+        except Exception as e:
+            log.error("DB 事件源异常: %s", e)
 
     def stop(self):
         self._timer.stop()
         self._db.close()
 
-    def _poll(self):
-        self._tick += 1
-        try:
-            allow_deep = (self._tick % DEEP_INTERVAL == 0)
-            st = _determine_status(self._proc, self._db, allow_deep)
-        except Exception as e:
-            log.error("轮询异常: %s", e)
-            st = "green"
-        PollWorker._latest_state = st
-        self.status_changed.emit(st)
+    _latest_fsm = FsmState.IDLE
+    _latest_light = "green"
 
     @classmethod
     def current_state(cls) -> dict:
         return {
-            "state": cls._latest_state,
+            "state": cls._latest_light,
             "timestamp": time.strftime("%H:%M:%S"),
-            "label": _LABELS.get(cls._latest_state, "未知"),
+            "label": FSM_LABELS.get(cls._latest_fsm, "🟢 空闲"),
         }
 
 
@@ -787,7 +992,7 @@ class TrafficLightApp(QApplication):
         a_quit.triggered.connect(self.quit)
         self._tray.setContextMenu(m)
 
-        self._last_state: Optional[str] = None
+        self._last_fsm: Optional[FsmState] = None
         self._blink_on = True  # blink toggle state
         self._worker_ref: Optional[PollWorker] = None
 
@@ -795,6 +1000,12 @@ class TrafficLightApp(QApplication):
         self._blink_timer = QTimer(self)
         self._blink_timer.timeout.connect(self._blink_tick)
         self._blink_timer.start(200)  # 基础 tick 200ms
+
+        # ── HTTP 外部事件接收器（UI Observer → HTTP POST → 事件总线） ──
+        self._http_thread = threading.Thread(
+            target=start_http_receiver, daemon=True,
+        )
+        self._http_thread.start()
 
         # ── Web 服务器 ──
         self._web_thread = threading.Thread(
@@ -834,20 +1045,17 @@ class TrafficLightApp(QApplication):
         log.info("开机自启: %s", "启用" if result else "禁用")
 
     def _blink_tick(self):
-        """每 200ms 触发，根据当前状态决定图标是否闪烁。"""
-        st = self._last_state or "green"
-        interval = _BLINK_MS.get(st, 0)
+        """每 200ms 触发，根据 FSM 状态决定图标闪烁。"""
+        fsm = self._last_fsm or FsmState.IDLE
+        light = FSM_TO_LIGHT.get(fsm, "green")
+        interval = FSM_BLINK.get(fsm, 0)
         if interval == 0:
             # 不闪烁 → 常亮
-            self._tray.setIcon(self._icons.get(st, self._icons["green"]))
+            self._tray.setIcon(self._icons.get(light, self._icons["green"]))
             return
 
-        # 闪烁: 根据 interval 决定 toggle 频率
-        # 每 blink_interval/200 次 tick 切换一次
-        tick_mod = interval // 200
-        if tick_mod < 1:
-            tick_mod = 1
-        # 使用一个计数器做 toggle
+        # 闪烁: 每 blink_interval/200 次 tick 切换
+        tick_mod = max(1, interval // 200)
         if not hasattr(self, '_blink_counter'):
             self._blink_counter = 0
         self._blink_counter += 1
@@ -855,21 +1063,23 @@ class TrafficLightApp(QApplication):
             self._blink_on = not self._blink_on
 
         if self._blink_on:
-            self._tray.setIcon(self._icons.get(st, self._icons["green"]))
+            self._tray.setIcon(self._icons.get(light, self._icons["green"]))
         else:
-            self._tray.setIcon(self._icons_dim.get(st, self._icons_dim["green"]))
+            self._tray.setIcon(self._icons_dim.get(light, self._icons_dim["green"]))
 
-    def _on_status(self, st: str):
-        if st == self._last_state:
+    def _on_status(self, fsm: FsmState):
+        """主线程接收 FSM 状态更新。"""
+        if fsm == self._last_fsm:
             return
-        self._last_state = st
-        self._blink_on = True  # reset blink
+        self._last_fsm = fsm
+        self._blink_on = True
         self._blink_counter = 0
-        # 立即更新图标（不闪烁时用常亮，闪烁时下次 _blink_tick 接管）
-        self._tray.setIcon(self._icons.get(st, self._icons["green"]))
-        self._info.setText(f"状态: {_LABELS.get(st, '未知')}")
-        self._tray.setToolTip(_TIPS.get(st, "Hermes Traffic Light"))
-        log.info("状态 → %s", _LABELS.get(st, st))
+
+        light = FSM_TO_LIGHT.get(fsm, "green")
+        self._tray.setIcon(self._icons.get(light, self._icons["green"]))
+        self._info.setText(f"状态: {FSM_LABELS.get(fsm, '未知')}")
+        self._tray.setToolTip(FSM_TIPS.get(fsm, "Hermes Traffic Light"))
+        log.info("FSM → %s (%s)", fsm.name, FSM_LABELS.get(fsm, ""))
 
     def quit(self):
         log.info("退出中…")
@@ -884,15 +1094,63 @@ class TrafficLightApp(QApplication):
 
 def main():
     log.info("main() PID=%d", os.getpid())
+
+    # 自动注入 Hermes UI Observer（无需手动 F12）
+    _ensure_auto_injection()
+
     try:
         app = TrafficLightApp(sys.argv)
         sys.exit(app.exec())
     except Exception as e:
         log.error("致命错误: %s", e)
         import traceback
-        traceback.print_exc()
-        input("按 Enter 退出…")
+        log.error(traceback.format_exc())
         sys.exit(1)
+
+
+def _ensure_auto_injection():
+    """将 UI Observer 注入到 Hermes 的 index.html 中，实现自动加载。
+
+    每次启动时检查并注入，即使 Hermes 更新后重置了 index.html，
+    下次启动信号灯时会自动重新注入。
+    """
+    hermes_assets = Path(
+        os.environ.get("LOCALAPPDATA", "C:/Users/Administrator/AppData/Local")
+    ) / "hermes" / "hermes-agent" / "apps" / "desktop" / "release" / "win-unpacked" / "resources" / "app.asar.unpacked" / "dist" / "assets"
+
+    hermes_html = hermes_assets.parent / "index.html"
+
+    if not hermes_html.exists():
+        log.info("Hermes 未安装或路径变更，跳过自动注入")
+        return
+
+    observer_dst = hermes_assets / "hermes-tl-observer.js"
+    observer_src = APP_DIR / "inject-ui-observer.js"
+
+    # 1. 复制 observer JS
+    if observer_src.exists():
+        try:
+            import shutil
+            shutil.copy2(str(observer_src), str(observer_dst))
+            log.info("已注入 JS: %s", observer_dst)
+        except Exception as e:
+            log.warning("注入 JS 失败: %s", e)
+    elif not observer_dst.exists():
+        log.warning("observer JS 不存在，跳过注入")
+
+    # 2. 检查 index.html 是否已有注入标记
+    try:
+        html = hermes_html.read_text(encoding="utf-8")
+        if 'hermes-tl-observer.js' in html:
+            log.info("index.html 已有注入标记")
+            return
+
+        # 在 </body> 前插入 script 标签
+        html = html.replace("</body>", '    <script src="./assets/hermes-tl-observer.js"></script>\n  </body>')
+        hermes_html.write_text(html, encoding="utf-8")
+        log.info("已写入 index.html 注入标记")
+    except Exception as e:
+        log.warning("注入 index.html 失败: %s", e)
 
 
 if __name__ == "__main__":

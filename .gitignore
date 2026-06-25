@@ -20,6 +20,11 @@ _mk_repo.py
 _parse.py
 _parse_gh.py
 
+# PyInstaller build artifacts
+build/
+dist/
+*.spec
+
 # IDE
 .vscode/
 .idea/

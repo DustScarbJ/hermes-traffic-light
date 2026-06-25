@@ -147,3 +147,2100 @@
 16:48:27 [INFO] PyQt6 OK
 16:48:27 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
 16:48:27 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+16:48:48 [INFO] ==================================================
+16:48:48 [INFO] 启动… Python 3.11.15 PID=35412
+16:48:48 [INFO] PyQt6 OK
+16:48:48 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+16:48:48 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+16:48:48 [INFO] main() PID=35412
+16:48:48 [INFO] GUI 初始化…
+16:48:48 [INFO] GUI 就绪
+16:48:48 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+16:48:48 [INFO] 轮询线程已启动 (间隔 1.5s)
+16:48:48 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+16:48:54 [INFO] 状态 → 🟢 空闲
+16:49:00 [INFO] 状态 → 🔴 正在执行
+16:57:23 [INFO] ==================================================
+16:57:23 [INFO] 启动… Python 3.11.15 PID=50412
+16:57:23 [INFO] PyQt6 OK
+16:57:23 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+16:57:23 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+16:57:23 [INFO] main() PID=50412
+16:57:23 [INFO] GUI 初始化…
+16:57:23 [INFO] GUI 就绪
+16:57:23 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+16:57:23 [INFO] 轮询线程已启动 (间隔 1.5s)
+16:57:23 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+16:57:26 [INFO] 状态 → 🟡 等待用户
+16:57:55 [INFO] 状态 → 🔴 正在执行
+16:58:25 [INFO] 退出中…
+16:58:49 [INFO] ==================================================
+16:58:49 [INFO] 启动… Python 3.11.15 PID=38012
+16:58:49 [INFO] PyQt6 OK
+16:58:49 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+16:58:49 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+16:58:49 [INFO] main() PID=38012
+16:58:49 [INFO] GUI 初始化…
+16:58:49 [INFO] GUI 就绪
+16:58:49 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+16:58:49 [INFO] 轮询线程已启动 (间隔 1.5s)
+16:58:49 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+16:58:52 [INFO] 状态 → 🔴 正在执行
+16:59:12 [INFO] 强制刷新检测缓存
+17:00:54 [INFO] 状态 → 🟡 等待用户
+17:01:31 [INFO] ==================================================
+17:01:31 [INFO] 启动… Python 3.11.15 PID=50932
+17:01:32 [INFO] PyQt6 OK
+17:01:32 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+17:01:32 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+17:01:32 [INFO] main() PID=50932
+17:01:32 [INFO] GUI 初始化…
+17:01:32 [INFO] GUI 就绪
+17:01:32 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+17:01:32 [INFO] 轮询线程已启动 (间隔 1.5s)
+17:01:32 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+17:01:35 [INFO] 状态 → 🟡 等待用户
+17:02:17 [INFO] 强制刷新检测缓存
+17:05:29 [INFO] ==================================================
+17:05:29 [INFO] 启动… Python 3.11.15 PID=53008
+17:05:29 [INFO] PyQt6 OK
+17:05:29 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+17:05:29 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+17:05:29 [INFO] main() PID=53008
+17:05:29 [INFO] GUI 初始化…
+17:05:29 [INFO] GUI 就绪
+17:05:29 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+17:05:29 [INFO] 轮询线程已启动 (间隔 1.5s)
+17:05:29 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+17:05:32 [INFO] 状态 → 🟢 空闲
+17:06:17 [INFO] 状态 → 🔴 正在执行
+17:06:22 [INFO] 状态 → 🟡 等待用户
+17:07:19 [INFO] 状态 → 🟢 空闲
+17:09:48 [INFO] ==================================================
+17:09:48 [INFO] 启动… Python 3.11.15 PID=53476
+17:09:48 [INFO] PyQt6 OK
+17:09:48 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+17:09:48 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+17:09:48 [INFO] main() PID=53476
+17:09:48 [INFO] GUI 初始化…
+17:09:48 [INFO] GUI 就绪
+17:09:48 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+17:09:48 [INFO] 轮询线程已启动 (间隔 1.5s)
+17:09:48 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+17:09:51 [INFO] 状态 → 🟢 空闲
+17:11:12 [INFO] ==================================================
+17:11:12 [INFO] 启动… Python 3.11.15 PID=43496
+17:11:12 [INFO] PyQt6 OK
+17:11:12 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+17:11:12 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+17:11:12 [INFO] main() PID=43496
+17:11:12 [INFO] GUI 初始化…
+17:11:12 [INFO] GUI 就绪
+17:11:12 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+17:11:12 [INFO] 轮询线程已启动 (间隔 1.5s)
+17:11:12 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+17:11:15 [INFO] 状态 → 🟢 空闲
+17:12:26 [INFO] ==================================================
+17:12:26 [INFO] 启动… Python 3.11.15 PID=12368
+17:12:26 [INFO] PyQt6 OK
+17:12:26 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+17:12:26 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+17:12:26 [INFO] main() PID=12368
+17:12:26 [INFO] GUI 初始化…
+17:12:26 [INFO] GUI 就绪
+17:12:26 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+17:12:26 [INFO] 轮询线程已启动 (间隔 1.5s)
+17:12:26 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+17:12:29 [INFO] 状态 → 🟢 空闲
+17:12:31 [INFO] 状态 → 🟡 等待用户
+17:12:41 [INFO] 退出中…
+17:13:18 [INFO] ==================================================
+17:13:18 [INFO] 启动… Python 3.11.15 PID=59064
+17:13:18 [INFO] PyQt6 OK
+17:13:18 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+17:13:18 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+17:13:18 [INFO] main() PID=59064
+17:13:18 [INFO] GUI 初始化…
+17:13:18 [INFO] GUI 就绪
+17:13:18 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+17:13:18 [INFO] 轮询线程已启动 (间隔 1.5s)
+17:13:18 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+17:13:21 [INFO] 状态 → 🟡 等待用户
+17:14:23 [INFO] 状态 → 🔴 正在执行
+17:14:29 [INFO] 状态 → 🟡 等待用户
+17:14:39 [INFO] ==================================================
+17:14:39 [INFO] 启动… Python 3.11.15 PID=16416
+17:14:39 [INFO] PyQt6 OK
+17:14:39 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+17:14:39 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+17:14:39 [INFO] main() PID=16416
+17:14:39 [INFO] GUI 初始化…
+17:14:39 [INFO] GUI 就绪
+17:14:39 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+17:14:39 [INFO] 轮询线程已启动 (间隔 1.5s)
+17:14:39 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+17:14:42 [INFO] 状态 → 🟡 等待用户
+17:16:57 [INFO] 退出中…
+17:21:58 [INFO] ==================================================
+17:21:58 [INFO] 启动… Python 3.11.15 PID=43276
+17:21:58 [INFO] PyQt6 OK
+17:21:58 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+17:21:58 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+17:21:58 [INFO] main() PID=43276
+17:21:58 [INFO] GUI 初始化…
+17:21:58 [INFO] GUI 就绪
+17:21:58 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+17:21:58 [INFO] 轮询线程已启动 (间隔 1.5s)
+17:21:58 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+17:22:01 [INFO] 状态 → 🟡 等待用户
+17:22:27 [INFO] 开机自启已禁用
+17:22:27 [INFO] 开机自启: 禁用
+17:23:10 [INFO] 状态 → 🔴 正在执行
+17:23:18 [INFO] 状态 → 🟡 等待用户
+17:23:34 [INFO] ==================================================
+17:23:34 [INFO] 启动… Python 3.11.15 PID=19028
+17:23:34 [INFO] PyQt6 OK
+17:23:34 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+17:23:34 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+17:23:34 [INFO] main() PID=19028
+17:23:34 [INFO] GUI 初始化…
+17:23:34 [INFO] GUI 就绪
+17:23:34 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+17:23:34 [INFO] 轮询线程已启动 (间隔 1.5s)
+17:23:34 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+17:23:37 [INFO] 状态 → 🟢 空闲
+17:24:03 [INFO] 强制刷新检测缓存
+17:24:04 [INFO] 状态 → 🟡 等待用户
+17:26:20 [INFO] ==================================================
+17:26:20 [INFO] 启动… Python 3.11.15 PID=36980
+17:26:20 [INFO] PyQt6 OK
+17:26:20 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+17:26:20 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+17:26:20 [INFO] main() PID=36980
+17:26:20 [INFO] GUI 初始化…
+17:26:20 [INFO] GUI 就绪
+17:26:20 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+17:26:20 [INFO] 轮询线程已启动 (间隔 1.5s)
+17:26:20 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+17:26:23 [INFO] 状态 → 🟢 空闲
+17:27:41 [INFO] 状态 → 🔴 正在执行
+17:27:48 [INFO] 状态 → 🟢 空闲
+17:27:53 [INFO] ==================================================
+17:27:53 [INFO] 启动… Python 3.11.15 PID=16060
+17:27:53 [INFO] PyQt6 OK
+17:27:53 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+17:27:53 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+17:27:53 [INFO] main() PID=16060
+17:27:53 [INFO] GUI 初始化…
+17:27:53 [INFO] GUI 就绪
+17:27:53 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+17:27:53 [INFO] 轮询线程已启动 (间隔 1.5s)
+17:27:53 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+17:27:56 [INFO] 状态 → 🟢 空闲
+17:28:16 [INFO] 状态 → 🔴 正在执行
+17:28:20 [INFO] 状态 → 🟢 空闲
+17:29:59 [INFO] 状态 → 🔴 正在执行
+17:30:05 [INFO] 状态 → 🟢 空闲
+17:43:57 [INFO] ==================================================
+17:43:57 [INFO] 启动… Python 3.11.15 PID=5292
+17:43:57 [INFO] PyQt6 OK
+17:43:57 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+17:43:57 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+17:46:30 [INFO] ==================================================
+17:46:30 [INFO] 启动… Python 3.11.15 PID=46356
+17:46:30 [INFO] PyQt6 OK
+17:46:30 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+17:46:30 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+17:46:30 [INFO] main() PID=46356
+17:46:30 [INFO] GUI 初始化…
+17:46:30 [INFO] GUI 就绪
+17:46:30 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+17:46:30 [INFO] 轮询线程已启动 (间隔 1.5s)
+17:46:30 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+17:46:34 [INFO] 状态 → 🔴 正在执行
+17:47:26 [INFO] 状态 → 🟢 空闲
+17:47:30 [INFO] 退出中…
+17:58:46 [INFO] ==================================================
+17:58:46 [INFO] 启动… Python 3.11.15 PID=28148
+17:58:46 [INFO] PyQt6 OK
+17:58:46 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+17:58:46 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+17:58:53 [INFO] ==================================================
+17:58:53 [INFO] 启动… Python 3.11.15 PID=56400
+17:58:53 [INFO] PyQt6 OK
+17:58:53 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+17:58:53 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+17:58:53 [INFO] main() PID=56400
+17:58:53 [INFO] GUI 初始化…
+17:58:53 [INFO] GUI 就绪
+17:58:53 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+17:58:53 [INFO] 轮询线程已启动 (间隔 1.5s)
+17:58:53 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+17:58:56 [INFO] FSM → RUNNING (🔴 正在执行)
+17:59:14 [INFO] FSM → IDLE (🟢 空闲)
+18:00:14 [INFO] FSM → RUNNING (🔴 正在执行)
+18:00:30 [INFO] FSM → IDLE (🟢 空闲)
+18:01:09 [INFO] FSM → RUNNING (🔴 正在执行)
+18:01:18 [INFO] FSM → IDLE (🟢 空闲)
+18:01:24 [INFO] FSM → RUNNING (🔴 正在执行)
+18:01:41 [INFO] ==================================================
+18:01:41 [INFO] 启动… Python 3.11.15 PID=9680
+18:01:41 [INFO] PyQt6 OK
+18:01:41 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+18:01:41 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+18:01:41 [INFO] main() PID=9680
+18:01:41 [INFO] GUI 初始化…
+18:01:41 [INFO] GUI 就绪
+18:01:41 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+18:01:41 [INFO] 轮询线程已启动 (间隔 1.5s)
+18:01:41 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+18:01:44 [INFO] FSM → IDLE (🟢 空闲)
+18:01:46 [INFO] FSM → RUNNING (🔴 正在执行)
+18:01:55 [INFO] FSM → IDLE (🟢 空闲)
+18:02:46 [INFO] FSM → RUNNING (🔴 正在执行)
+18:02:53 [INFO] FSM → IDLE (🟢 空闲)
+18:03:13 [INFO] FSM → RUNNING (🔴 正在执行)
+18:03:22 [INFO] ==================================================
+18:03:22 [INFO] 启动… Python 3.11.15 PID=49512
+18:03:22 [INFO] PyQt6 OK
+18:03:22 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+18:03:22 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+18:03:22 [INFO] main() PID=49512
+18:03:22 [INFO] GUI 初始化…
+18:03:22 [INFO] GUI 就绪
+18:03:22 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+18:03:22 [INFO] 轮询线程已启动 (间隔 1.5s)
+18:03:22 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+18:03:25 [INFO] FSM → IDLE (🟢 空闲)
+18:03:26 [INFO] FSM → RUNNING (🔴 正在执行)
+18:03:35 [INFO] FSM → IDLE (🟢 空闲)
+18:03:43 [INFO] FSM → RUNNING (🔴 正在执行)
+18:03:53 [INFO] FSM → WAIT_USER (🟡 等待用户)
+18:06:17 [INFO] FSM → RUNNING (🔴 正在执行)
+18:06:32 [INFO] FSM → WAIT_USER (🟡 等待用户)
+18:06:41 [INFO] FSM → RUNNING (🔴 正在执行)
+18:06:47 [INFO] ==================================================
+18:06:47 [INFO] 启动… Python 3.11.15 PID=51928
+18:06:47 [INFO] PyQt6 OK
+18:06:47 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+18:06:47 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+18:06:54 [INFO] ==================================================
+18:06:54 [INFO] 启动… Python 3.11.15 PID=63280
+18:06:54 [INFO] PyQt6 OK
+18:06:54 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+18:06:54 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+18:06:54 [INFO] main() PID=63280
+18:06:54 [INFO] GUI 初始化…
+18:06:55 [INFO] GUI 就绪
+18:06:55 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+18:06:55 [INFO] 轮询线程已启动 (间隔 1.5s)
+18:06:55 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+18:06:58 [INFO] FSM → IDLE (🟢 空闲)
+18:06:59 [INFO] FSM → RUNNING (🔴 正在执行)
+18:07:01 [INFO] FSM → IDLE (🟢 空闲)
+18:07:43 [INFO] FSM → RUNNING (🔴 正在执行)
+18:07:46 [INFO] FSM → IDLE (🟢 空闲)
+18:09:08 [INFO] FSM → RUNNING (🔴 正在执行)
+18:09:11 [INFO] FSM → IDLE (🟢 空闲)
+18:12:47 [INFO] FSM → RUNNING (🔴 正在执行)
+18:12:49 [INFO] FSM → IDLE (🟢 空闲)
+18:14:56 [INFO] ==================================================
+18:14:56 [INFO] 启动… Python 3.11.15 PID=31696
+18:14:56 [INFO] PyQt6 OK
+18:14:56 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+18:14:56 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+18:15:04 [INFO] ==================================================
+18:15:04 [INFO] 启动… Python 3.11.15 PID=18616
+18:15:04 [INFO] PyQt6 OK
+18:15:04 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+18:15:04 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+18:15:04 [INFO] main() PID=18616
+18:15:04 [INFO] GUI 初始化…
+18:15:04 [INFO] GUI 就绪
+18:15:04 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+18:15:04 [INFO] 事件源已启动 (间隔 200ms)
+18:15:04 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+18:15:06 [INFO] FSEvent: IDLE (session start)
+18:15:06 [INFO] FSM → IDLE (🟢 空闲)
+18:16:10 [INFO] FSEvent: RUNNING (tool=todo)
+18:16:10 [INFO] FSEvent: IDLE (tool end)
+18:16:10 [INFO] FSEvent: RUNNING (tool=read_file)
+18:16:10 [INFO] FSM → RUNNING (🔴 正在执行)
+18:16:10 [INFO] FSEvent: IDLE (tool end)
+18:16:10 [INFO] FSM → IDLE (🟢 空闲)
+18:16:10 [INFO] FSEvent: RUNNING (tool=read_file)
+18:16:10 [INFO] FSM → RUNNING (🔴 正在执行)
+18:16:10 [INFO] FSEvent: IDLE (tool end)
+18:16:10 [INFO] FSEvent: RUNNING (tool=read_file)
+18:16:10 [INFO] FSM → IDLE (🟢 空闲)
+18:16:10 [INFO] FSEvent: IDLE (tool end)
+18:16:10 [INFO] FSM → RUNNING (🔴 正在执行)
+18:16:10 [INFO] FSEvent: RUNNING (tool=patch)
+18:16:10 [INFO] FSM → IDLE (🟢 空闲)
+18:16:10 [INFO] FSEvent: IDLE (tool end)
+18:16:10 [INFO] FSM → RUNNING (🔴 正在执行)
+18:16:10 [INFO] FSEvent: RUNNING (tool=read_file)
+18:16:10 [INFO] FSM → IDLE (🟢 空闲)
+18:16:10 [INFO] FSEvent: IDLE (tool end)
+18:16:10 [INFO] FSM → RUNNING (🔴 正在执行)
+18:16:10 [INFO] FSEvent: RUNNING (tool=patch)
+18:16:10 [INFO] FSM → IDLE (🟢 空闲)
+18:16:10 [INFO] FSEvent: IDLE (tool end)
+18:16:10 [INFO] FSM → RUNNING (🔴 正在执行)
+18:16:10 [INFO] FSEvent: RUNNING (tool=patch)
+18:16:10 [INFO] FSM → IDLE (🟢 空闲)
+18:16:10 [INFO] FSEvent: IDLE (tool end)
+18:16:10 [INFO] FSM → RUNNING (🔴 正在执行)
+18:16:10 [INFO] FSEvent: RUNNING (tool=read_file)
+18:16:10 [INFO] FSM → IDLE (🟢 空闲)
+18:16:10 [INFO] FSEvent: IDLE (tool end)
+18:16:10 [INFO] FSM → RUNNING (🔴 正在执行)
+18:16:10 [INFO] FSEvent: RUNNING (tool=read_file)
+18:16:10 [INFO] FSM → IDLE (🟢 空闲)
+18:16:10 [INFO] FSEvent: IDLE (tool end)
+18:16:10 [INFO] FSM → RUNNING (🔴 正在执行)
+18:16:10 [INFO] FSEvent: RUNNING (tool=search_files)
+18:16:10 [INFO] FSEvent: IDLE (tool end)
+18:16:10 [INFO] FSM → IDLE (🟢 空闲)
+18:16:10 [INFO] FSEvent: RUNNING (tool=patch)
+18:16:10 [INFO] FSM → RUNNING (🔴 正在执行)
+18:16:10 [INFO] FSEvent: IDLE (tool end)
+18:16:10 [INFO] FSM → IDLE (🟢 空闲)
+18:16:10 [INFO] FSEvent: RUNNING (tool=terminal)
+18:16:10 [INFO] FSM → RUNNING (🔴 正在执行)
+18:16:10 [INFO] FSEvent: IDLE (tool end)
+18:16:10 [INFO] FSM → IDLE (🟢 空闲)
+18:16:10 [INFO] FSM → RUNNING (🔴 正在执行)
+18:16:10 [INFO] FSM → IDLE (🟢 空闲)
+18:16:10 [INFO] FSM → RUNNING (🔴 正在执行)
+18:16:10 [INFO] FSM → IDLE (🟢 空闲)
+18:16:10 [INFO] FSEvent: RUNNING (tool=terminal)
+18:16:10 [INFO] FSEvent: IDLE (tool end)
+18:16:10 [INFO] FSEvent: RUNNING (tool=terminal)
+18:16:10 [INFO] FSEvent: IDLE (tool end)
+18:16:10 [INFO] FSM → RUNNING (🔴 正在执行)
+18:16:10 [INFO] FSEvent: WAIT_USER (clarify)
+18:16:10 [INFO] FSM → IDLE (🟢 空闲)
+18:16:10 [INFO] FSEvent: RUNNING (tool=terminal)
+18:16:10 [INFO] FSM → RUNNING (🔴 正在执行)
+18:16:10 [INFO] FSEvent: IDLE (tool end)
+18:16:10 [INFO] FSM → IDLE (🟢 空闲)
+18:16:10 [INFO] FSEvent: RUNNING (tool=terminal)
+18:16:10 [INFO] FSM → WAIT_USER (🟡 等待用户)
+18:16:10 [INFO] FSEvent: IDLE (tool end)
+18:16:10 [INFO] FSM → RUNNING (🔴 正在执行)
+18:16:10 [INFO] FSM → IDLE (🟢 空闲)
+18:16:10 [INFO] FSM → RUNNING (🔴 正在执行)
+18:16:10 [INFO] FSM → IDLE (🟢 空闲)
+18:46:35 [INFO] 退出中…
+10:31:19 [INFO] ==================================================
+10:31:19 [INFO] 启动… Python 3.11.15 PID=18948
+10:31:19 [INFO] PyQt6 OK
+10:31:19 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+10:31:19 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+10:31:19 [INFO] main() PID=18948
+10:31:19 [INFO] GUI 初始化…
+10:31:19 [INFO] GUI 就绪
+10:31:19 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+10:31:19 [INFO] 事件源已启动 (间隔 200ms)
+10:31:19 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+10:31:20 [INFO] FSEvent: IDLE (session start)
+10:31:20 [INFO] FSM → IDLE (🟢 空闲)
+10:32:33 [INFO] FSEvent: RUNNING (tool=terminal)
+10:32:33 [INFO] FSEvent: IDLE (tool end)
+10:32:33 [INFO] FSM → RUNNING (🔴 正在执行)
+10:32:33 [INFO] FSEvent: RUNNING (tool=terminal)
+10:32:33 [INFO] FSM → IDLE (🟢 空闲)
+10:32:33 [INFO] FSEvent: IDLE (tool end)
+10:32:33 [INFO] FSM → RUNNING (🔴 正在执行)
+10:32:33 [INFO] FSEvent: RUNNING (tool=terminal)
+10:32:33 [INFO] FSM → IDLE (🟢 空闲)
+10:32:33 [INFO] FSEvent: IDLE (tool end)
+10:32:33 [INFO] FSM → RUNNING (🔴 正在执行)
+10:32:33 [INFO] FSEvent: RUNNING (tool=terminal)
+10:32:33 [INFO] FSM → IDLE (🟢 空闲)
+10:32:33 [INFO] FSEvent: IDLE (tool end)
+10:32:33 [INFO] FSM → RUNNING (🔴 正在执行)
+10:32:33 [INFO] FSEvent: RUNNING (tool=terminal)
+10:32:33 [INFO] FSM → IDLE (🟢 空闲)
+10:32:33 [INFO] FSEvent: IDLE (tool end)
+10:32:33 [INFO] FSM → RUNNING (🔴 正在执行)
+10:32:33 [INFO] FSM → IDLE (🟢 空闲)
+10:38:25 [INFO] ==================================================
+10:38:25 [INFO] 启动… Python 3.11.15 PID=23756
+10:38:25 [INFO] PyQt6 OK
+10:38:25 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+10:38:25 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+10:38:32 [INFO] ==================================================
+10:38:32 [INFO] 启动… Python 3.11.15 PID=4424
+10:38:32 [INFO] PyQt6 OK
+10:38:32 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+10:38:32 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+10:38:32 [INFO] main() PID=4424
+10:38:32 [INFO] GUI 初始化…
+10:38:32 [INFO] GUI 就绪
+10:38:32 [INFO] UDP 事件接收器已启动 → 127.0.0.1:18888
+10:38:32 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+10:38:32 [INFO] 事件源已启动 (间隔 200ms)
+10:38:32 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+10:38:33 [INFO] FSEvent: IDLE (session start)
+10:38:33 [INFO] FSM → IDLE (🟢 空闲)
+10:38:38 [INFO] UDP ← event=tool_start from=('127.0.0.1', 55710)
+10:38:38 [INFO] FSEvent: RUNNING (tool=?)
+10:38:38 [INFO] FSM → RUNNING (🔴 正在执行)
+10:38:39 [INFO] UDP ← event=tool_end from=('127.0.0.1', 55711)
+10:38:40 [INFO] FSEvent: IDLE (tool end)
+10:38:40 [INFO] FSM → IDLE (🟢 空闲)
+10:39:25 [INFO] UDP ← event=tool_start from=('127.0.0.1', 51129)
+10:39:25 [INFO] FSEvent: RUNNING (tool=?)
+10:39:25 [INFO] FSM → RUNNING (🔴 正在执行)
+10:39:26 [INFO] UDP ← event=clarify_request from=('127.0.0.1', 51130)
+10:39:26 [INFO] FSEvent: WAIT_USER (clarify)
+10:39:26 [INFO] FSM → WAIT_USER (🟡 等待用户)
+10:39:27 [INFO] UDP ← event=tool_end from=('127.0.0.1', 51131)
+10:39:38 [INFO] FSEvent: RUNNING (tool=todo)
+10:39:38 [INFO] FSEvent: IDLE (tool end)
+10:39:38 [INFO] FSEvent: RUNNING (tool=search_files)
+10:39:38 [INFO] FSM → RUNNING (🔴 正在执行)
+10:39:38 [INFO] FSEvent: IDLE (tool end)
+10:39:38 [INFO] FSEvent: RUNNING (tool=read_file)
+10:39:38 [INFO] FSM → IDLE (🟢 空闲)
+10:39:38 [INFO] FSEvent: IDLE (tool end)
+10:39:38 [INFO] FSM → RUNNING (🔴 正在执行)
+10:39:38 [INFO] FSEvent: RUNNING (tool=patch)
+10:39:38 [INFO] FSM → IDLE (🟢 空闲)
+10:39:38 [INFO] FSEvent: IDLE (tool end)
+10:39:38 [INFO] FSM → RUNNING (🔴 正在执行)
+10:39:38 [INFO] FSEvent: RUNNING (tool=patch)
+10:39:38 [INFO] FSEvent: IDLE (tool end)
+10:39:38 [INFO] FSM → IDLE (🟢 空闲)
+10:39:38 [INFO] FSEvent: RUNNING (tool=patch)
+10:39:38 [INFO] FSM → RUNNING (🔴 正在执行)
+10:39:38 [INFO] FSEvent: IDLE (tool end)
+10:39:38 [INFO] FSM → IDLE (🟢 空闲)
+10:39:38 [INFO] FSEvent: RUNNING (tool=read_file)
+10:39:38 [INFO] FSM → RUNNING (🔴 正在执行)
+10:39:38 [INFO] FSEvent: IDLE (tool end)
+10:39:38 [INFO] FSEvent: RUNNING (tool=patch)
+10:39:38 [INFO] FSM → IDLE (🟢 空闲)
+10:39:38 [INFO] FSEvent: IDLE (tool end)
+10:39:38 [INFO] FSM → RUNNING (🔴 正在执行)
+10:39:38 [INFO] FSEvent: RUNNING (tool=patch)
+10:39:38 [INFO] FSM → IDLE (🟢 空闲)
+10:39:38 [INFO] FSEvent: IDLE (tool end)
+10:39:38 [INFO] FSEvent: RUNNING (tool=read_file)
+10:39:38 [INFO] FSM → RUNNING (🔴 正在执行)
+10:39:38 [INFO] FSEvent: IDLE (tool end)
+10:39:38 [INFO] FSM → IDLE (🟢 空闲)
+10:39:38 [INFO] FSEvent: RUNNING (tool=patch)
+10:39:38 [INFO] FSEvent: IDLE (tool end)
+10:39:38 [INFO] FSM → RUNNING (🔴 正在执行)
+10:39:38 [INFO] FSEvent: RUNNING (tool=terminal)
+10:39:38 [INFO] FSM → IDLE (🟢 空闲)
+10:39:38 [INFO] FSEvent: IDLE (tool end)
+10:39:38 [INFO] FSM → RUNNING (🔴 正在执行)
+10:39:38 [INFO] FSEvent: RUNNING (tool=terminal)
+10:39:38 [INFO] FSEvent: IDLE (tool end)
+10:39:38 [INFO] FSEvent: RUNNING (tool=terminal)
+10:39:38 [INFO] FSM → IDLE (🟢 空闲)
+10:39:38 [INFO] FSEvent: IDLE (tool end)
+10:39:38 [INFO] FSM → RUNNING (🔴 正在执行)
+10:39:38 [INFO] FSEvent: RUNNING (tool=todo)
+10:39:38 [INFO] FSM → IDLE (🟢 空闲)
+10:39:38 [INFO] FSEvent: IDLE (tool end)
+10:39:38 [INFO] FSM → RUNNING (🔴 正在执行)
+10:39:38 [INFO] FSEvent: RUNNING (tool=terminal)
+10:39:38 [INFO] FSM → IDLE (🟢 空闲)
+10:39:38 [INFO] FSEvent: IDLE (tool end)
+10:39:38 [INFO] FSM → RUNNING (🔴 正在执行)
+10:39:38 [INFO] FSEvent: RUNNING (tool=write_file)
+10:39:38 [INFO] FSM → IDLE (🟢 空闲)
+10:39:38 [INFO] FSEvent: IDLE (tool end)
+10:39:38 [INFO] FSM → RUNNING (🔴 正在执行)
+10:39:38 [INFO] FSEvent: RUNNING (tool=write_file)
+10:39:38 [INFO] FSM → IDLE (🟢 空闲)
+10:39:38 [INFO] FSEvent: IDLE (tool end)
+10:39:38 [INFO] FSM → RUNNING (🔴 正在执行)
+10:39:38 [INFO] FSEvent: RUNNING (tool=search_files)
+10:39:38 [INFO] FSM → IDLE (🟢 空闲)
+10:39:38 [INFO] FSEvent: IDLE (tool end)
+10:39:38 [INFO] FSEvent: RUNNING (tool=read_file)
+10:39:38 [INFO] FSM → RUNNING (🔴 正在执行)
+10:39:38 [INFO] FSEvent: IDLE (tool end)
+10:39:38 [INFO] FSM → IDLE (🟢 空闲)
+10:39:38 [INFO] FSEvent: RUNNING (tool=todo)
+10:39:38 [INFO] FSM → RUNNING (🔴 正在执行)
+10:39:38 [INFO] FSM → IDLE (🟢 空闲)
+10:39:38 [INFO] FSEvent: IDLE (tool end)
+10:39:38 [INFO] FSM → RUNNING (🔴 正在执行)
+10:39:38 [INFO] FSEvent: RUNNING (tool=terminal)
+10:39:38 [INFO] FSM → IDLE (🟢 空闲)
+10:39:38 [INFO] FSM → RUNNING (🔴 正在执行)
+10:39:38 [INFO] FSEvent: IDLE (tool end)
+10:39:38 [INFO] FSM → IDLE (🟢 空闲)
+10:39:38 [INFO] FSM → RUNNING (🔴 正在执行)
+10:39:38 [INFO] FSM → IDLE (🟢 空闲)
+10:39:38 [INFO] FSM → RUNNING (🔴 正在执行)
+10:39:38 [INFO] FSM → IDLE (🟢 空闲)
+10:39:38 [INFO] FSM → RUNNING (🔴 正在执行)
+10:39:38 [INFO] FSM → IDLE (🟢 空闲)
+10:39:38 [INFO] FSM → RUNNING (🔴 正在执行)
+10:39:38 [INFO] FSM → IDLE (🟢 空闲)
+10:41:25 [INFO] UDP ← event=tool_start from=('127.0.0.1', 56955)
+10:41:25 [INFO] FSEvent: RUNNING (tool=?)
+10:41:25 [INFO] FSM → RUNNING (🔴 正在执行)
+10:41:25 [INFO] UDP ← event=tool_start from=('127.0.0.1', 56956)
+10:41:26 [INFO] FSEvent: RUNNING (tool=?)
+10:41:26 [INFO] UDP ← event=clarify_request from=('127.0.0.1', 56957)
+10:41:26 [INFO] FSEvent: WAIT_USER (clarify)
+10:41:26 [INFO] FSM → WAIT_USER (🟡 等待用户)
+10:41:26 [INFO] UDP ← event=tool_start from=('127.0.0.1', 56958)
+10:41:27 [INFO] UDP ← event=tool_end from=('127.0.0.1', 56959)
+10:41:27 [INFO] FSEvent: RUNNING (tool=?)
+10:41:27 [INFO] FSEvent: IDLE (tool end)
+10:41:27 [INFO] FSM → RUNNING (🔴 正在执行)
+10:41:27 [INFO] FSM → IDLE (🟢 空闲)
+10:41:27 [INFO] UDP ← event=clarify_request from=('127.0.0.1', 56960)
+10:41:28 [INFO] FSEvent: WAIT_USER (clarify)
+10:41:28 [INFO] FSM → WAIT_USER (🟡 等待用户)
+10:41:28 [INFO] UDP ← event=tool_end from=('127.0.0.1', 56961)
+10:41:28 [INFO] UDP ← event=message_user from=('127.0.0.1', 56962)
+10:41:29 [INFO] FSEvent: RUNNING (user msg after clarify)
+10:41:29 [INFO] FSM → RUNNING (🔴 正在执行)
+10:41:29 [INFO] UDP ← event=tool_end from=('127.0.0.1', 56963)
+10:41:29 [INFO] FSEvent: IDLE (tool end)
+10:41:29 [INFO] FSM → IDLE (🟢 空闲)
+10:41:47 [INFO] FSEvent: RUNNING (tool=terminal)
+10:41:47 [INFO] FSEvent: IDLE (tool end)
+10:41:47 [INFO] FSM → RUNNING (🔴 正在执行)
+10:41:47 [INFO] FSEvent: RUNNING (tool=terminal)
+10:41:47 [INFO] FSM → IDLE (🟢 空闲)
+10:41:47 [INFO] FSEvent: IDLE (tool end)
+10:41:47 [INFO] FSM → RUNNING (🔴 正在执行)
+10:41:47 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSEvent: RUNNING (tool=skill_view)
+10:49:18 [INFO] FSEvent: RUNNING (tool=web_search)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSEvent: RUNNING (tool=read_file)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSEvent: RUNNING (tool=read_file)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSEvent: WAIT_USER (clarify)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSEvent: WAIT_USER (clarify)
+10:49:18 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSM → WAIT_USER (🟡 等待用户)
+10:49:18 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSEvent: WAIT_USER (clarify)
+10:49:18 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:18 [INFO] FSM → WAIT_USER (🟡 等待用户)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSEvent: WAIT_USER (clarify)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:18 [INFO] FSM → WAIT_USER (🟡 等待用户)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSEvent: WAIT_USER (clarify)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSEvent: RUNNING (user msg after clarify)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSEvent: WAIT_USER (clarify)
+10:49:18 [INFO] FSM → WAIT_USER (🟡 等待用户)
+10:49:18 [INFO] FSEvent: RUNNING (user msg after clarify)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSEvent: IDLE (tool end)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSM → WAIT_USER (🟡 等待用户)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:18 [INFO] FSM → WAIT_USER (🟡 等待用户)
+10:49:18 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:18 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: WAIT_USER (clarify)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSEvent: RUNNING (user msg after clarify)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → WAIT_USER (🟡 等待用户)
+10:49:19 [INFO] FSEvent: WAIT_USER (clarify)
+10:49:19 [INFO] FSEvent: RUNNING (user msg after clarify)
+10:49:19 [INFO] FSEvent: RUNNING (tool=skill_view)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=todo)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=todo)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=read_file)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=search_files)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=todo)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=todo)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=read_file)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=write_file)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=todo)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → WAIT_USER (🟡 等待用户)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: WAIT_USER (clarify)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → WAIT_USER (🟡 等待用户)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=read_file)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=read_file)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=read_file)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSEvent: RUNNING (tool=search_files)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSEvent: RUNNING (tool=read_file)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSEvent: RUNNING (tool=search_files)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSEvent: RUNNING (tool=search_files)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSEvent: IDLE (tool end)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:19 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:19 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=read_file)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=read_file)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=read_file)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=search_files)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSEvent: RUNNING (tool=read_file)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: WAIT_USER (clarify)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: WAIT_USER (clarify)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:20 [INFO] FSM → WAIT_USER (🟡 等待用户)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: WAIT_USER (clarify)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → WAIT_USER (🟡 等待用户)
+10:49:20 [INFO] FSEvent: WAIT_USER (clarify)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (user msg after clarify)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=read_file)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → WAIT_USER (🟡 等待用户)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → WAIT_USER (🟡 等待用户)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: WAIT_USER (clarify)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=todo)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSEvent: RUNNING (tool=read_file)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=read_file)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=read_file)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSEvent: RUNNING (tool=read_file)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=read_file)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=read_file)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=search_files)
+10:49:20 [INFO] FSM → WAIT_USER (🟡 等待用户)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: WAIT_USER (clarify)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=write_file)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=todo)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=search_files)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=read_file)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → WAIT_USER (🟡 等待用户)
+10:49:20 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSEvent: RUNNING (tool=read_file)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=read_file)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSEvent: RUNNING (tool=patch)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSEvent: RUNNING (tool=todo)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSEvent: RUNNING (tool=write_file)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=write_file)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=search_files)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=read_file)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=todo)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSEvent: RUNNING (tool=terminal)
+10:49:20 [INFO] FSEvent: IDLE (tool end)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:49:20 [INFO] FSM → RUNNING (🔴 正在执行)
+10:49:20 [INFO] FSM → IDLE (🟢 空闲)
+10:54:11 [INFO] ==================================================
+10:54:11 [INFO] 启动… Python 3.11.15 PID=4432
+10:54:11 [INFO] PyQt6 OK
+10:54:11 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+10:54:11 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+10:54:17 [INFO] ==================================================
+10:54:17 [INFO] 启动… Python 3.11.15 PID=2408
+10:54:17 [INFO] PyQt6 OK
+10:54:17 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+10:54:17 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+10:54:17 [INFO] main() PID=2408
+10:54:17 [INFO] GUI 初始化…
+10:54:17 [INFO] GUI 就绪
+10:54:17 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+10:54:17 [INFO] 事件源已启动 (间隔 200ms)
+10:54:17 [INFO] HTTP 事件接收器已启动 → http://127.0.0.1:18888/event
+10:54:17 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+10:54:19 [INFO] FSEvent: IDLE (session start)
+10:54:19 [INFO] FSM → IDLE (🟢 空闲)
+10:54:21 [INFO] HTTP ← event=busy source=ui detail={}
+10:54:22 [INFO] FSEvent: RUNNING (busy)
+10:54:22 [INFO] HTTP ← event=idle source=ui detail={}
+10:54:22 [INFO] FSEvent: IDLE (ui idle)
+10:54:23 [INFO] HTTP ← event=needs_input source=ui detail={}
+10:54:23 [INFO] FSEvent: WAIT_USER (needs_input)
+10:54:44 [INFO] HTTP ← event=busy source=ui detail={}
+10:54:44 [INFO] FSEvent: RUNNING (busy)
+10:55:04 [INFO] ==================================================
+10:55:04 [INFO] 启动… Python 3.11.15 PID=11608
+10:55:04 [INFO] PyQt6 OK
+10:55:04 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+10:55:04 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+10:55:04 [INFO] main() PID=11608
+10:55:04 [INFO] GUI 初始化…
+10:55:04 [INFO] GUI 就绪
+10:55:04 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+10:55:04 [INFO] 事件源已启动 (间隔 200ms)
+10:55:04 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+10:55:04 [INFO] HTTP 事件接收器已启动 → http://127.0.0.1:18888/event
+10:55:06 [INFO] FSEvent: IDLE (session start)
+10:55:06 [INFO] FSM → IDLE (🟢 空闲)
+10:55:09 [INFO] HTTP ← event=busy source=ui detail={}
+10:55:09 [INFO] FSEvent: RUNNING (busy)
+10:55:09 [INFO] GUI ← RUNNING (red)
+10:55:09 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:12 [INFO] HTTP ← event=idle source=ui detail={}
+10:55:13 [INFO] FSEvent: IDLE (ui idle)
+10:55:13 [INFO] GUI ← IDLE (green)
+10:55:13 [INFO] FSM → IDLE (🟢 空闲)
+10:55:23 [INFO] HTTP ← event=busy source=ui detail={}
+10:55:24 [INFO] FSEvent: RUNNING (busy)
+10:55:24 [INFO] GUI ← RUNNING (red)
+10:55:24 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:24 [INFO] HTTP ← event=needs_input source=ui detail={}
+10:55:25 [INFO] FSEvent: WAIT_USER (needs_input)
+10:55:25 [INFO] GUI ← WAIT_USER (yellow)
+10:55:25 [INFO] FSM → WAIT_USER (🟡 等待用户)
+10:55:26 [INFO] HTTP ← event=idle source=ui detail={}
+10:55:26 [INFO] FSEvent: IDLE (ui idle)
+10:55:26 [INFO] GUI ← IDLE (green)
+10:55:26 [INFO] FSM → IDLE (🟢 空闲)
+10:55:30 [INFO] HTTP ← event=busy source=ui detail={}
+10:55:30 [INFO] FSEvent: RUNNING (busy)
+10:55:30 [INFO] GUI ← RUNNING (red)
+10:55:30 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:31 [INFO] HTTP ← event=tool_end source=db detail={}
+10:55:36 [INFO] HTTP ← event=tool_end source=db detail={}
+10:55:36 [INFO] FSEvent: IDLE (tool end)
+10:55:36 [INFO] GUI ← IDLE (green)
+10:55:36 [INFO] FSM → IDLE (🟢 空闲)
+10:55:38 [INFO] HTTP ← event=needs_input source=ui detail={}
+10:55:39 [INFO] FSEvent: WAIT_USER (needs_input)
+10:55:39 [INFO] GUI ← WAIT_USER (yellow)
+10:55:39 [INFO] FSM → WAIT_USER (🟡 等待用户)
+10:55:40 [INFO] HTTP ← event=idle source=ui detail={}
+10:55:40 [INFO] FSEvent: IDLE (ui idle)
+10:55:40 [INFO] GUI ← IDLE (green)
+10:55:40 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSEvent: RUNNING (tool_start tool=?)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+10:55:48 [INFO] GUI ← RUNNING (red)
+10:55:48 [INFO] FSEvent: IDLE (tool end)
+10:55:48 [INFO] FSM → RUNNING (🔴 正在执行)
+10:55:48 [INFO] GUI ← IDLE (green)
+10:55:48 [INFO] FSM → IDLE (🟢 空闲)
+11:01:39 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:01:39 [INFO] GUI ← RUNNING (red)
+11:01:39 [INFO] FSEvent: IDLE (tool end)
+11:01:39 [INFO] GUI ← IDLE (green)
+11:01:39 [INFO] FSM → RUNNING (🔴 正在执行)
+11:01:39 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:01:39 [INFO] FSM → IDLE (🟢 空闲)
+11:01:39 [INFO] GUI ← RUNNING (red)
+11:01:39 [INFO] FSEvent: IDLE (tool end)
+11:01:39 [INFO] FSM → RUNNING (🔴 正在执行)
+11:01:39 [INFO] GUI ← IDLE (green)
+11:01:39 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:01:39 [INFO] FSM → IDLE (🟢 空闲)
+11:01:39 [INFO] GUI ← RUNNING (red)
+11:01:39 [INFO] FSEvent: IDLE (tool end)
+11:01:39 [INFO] FSM → RUNNING (🔴 正在执行)
+11:01:39 [INFO] GUI ← IDLE (green)
+11:01:39 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:01:39 [INFO] FSM → IDLE (🟢 空闲)
+11:01:39 [INFO] GUI ← RUNNING (red)
+11:01:39 [INFO] FSEvent: IDLE (tool end)
+11:01:39 [INFO] FSM → RUNNING (🔴 正在执行)
+11:01:39 [INFO] GUI ← IDLE (green)
+11:01:39 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:01:39 [INFO] FSM → IDLE (🟢 空闲)
+11:01:39 [INFO] GUI ← RUNNING (red)
+11:01:39 [INFO] FSEvent: IDLE (tool end)
+11:01:39 [INFO] FSM → RUNNING (🔴 正在执行)
+11:01:39 [INFO] GUI ← IDLE (green)
+11:01:39 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:01:39 [INFO] FSM → IDLE (🟢 空闲)
+11:01:39 [INFO] GUI ← RUNNING (red)
+11:01:39 [INFO] FSEvent: IDLE (tool end)
+11:01:39 [INFO] FSM → RUNNING (🔴 正在执行)
+11:01:39 [INFO] GUI ← IDLE (green)
+11:01:39 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:01:39 [INFO] FSM → IDLE (🟢 空闲)
+11:01:39 [INFO] GUI ← RUNNING (red)
+11:01:39 [INFO] FSM → RUNNING (🔴 正在执行)
+11:01:39 [INFO] FSEvent: IDLE (tool end)
+11:01:39 [INFO] GUI ← IDLE (green)
+11:01:39 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:01:39 [INFO] FSM → IDLE (🟢 空闲)
+11:01:39 [INFO] GUI ← RUNNING (red)
+11:01:39 [INFO] FSEvent: IDLE (tool end)
+11:01:39 [INFO] FSM → RUNNING (🔴 正在执行)
+11:01:39 [INFO] GUI ← IDLE (green)
+11:01:39 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:01:39 [INFO] GUI ← RUNNING (red)
+11:01:39 [INFO] FSM → IDLE (🟢 空闲)
+11:01:39 [INFO] FSEvent: IDLE (tool end)
+11:01:39 [INFO] FSM → RUNNING (🔴 正在执行)
+11:01:39 [INFO] GUI ← IDLE (green)
+11:01:39 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:01:39 [INFO] FSM → IDLE (🟢 空闲)
+11:01:39 [INFO] GUI ← RUNNING (red)
+11:01:39 [INFO] FSEvent: IDLE (tool end)
+11:01:39 [INFO] GUI ← IDLE (green)
+11:01:39 [INFO] FSM → RUNNING (🔴 正在执行)
+11:01:39 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:01:39 [INFO] GUI ← RUNNING (red)
+11:01:39 [INFO] FSM → IDLE (🟢 空闲)
+11:01:39 [INFO] FSEvent: IDLE (tool end)
+11:01:39 [INFO] GUI ← IDLE (green)
+11:01:39 [INFO] FSM → RUNNING (🔴 正在执行)
+11:01:39 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:01:39 [INFO] FSM → IDLE (🟢 空闲)
+11:01:39 [INFO] GUI ← RUNNING (red)
+11:01:39 [INFO] FSEvent: IDLE (tool end)
+11:01:39 [INFO] FSM → RUNNING (🔴 正在执行)
+11:01:39 [INFO] GUI ← IDLE (green)
+11:01:39 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:01:39 [INFO] FSM → IDLE (🟢 空闲)
+11:01:39 [INFO] GUI ← RUNNING (red)
+11:01:39 [INFO] FSEvent: IDLE (tool end)
+11:01:39 [INFO] FSM → RUNNING (🔴 正在执行)
+11:01:39 [INFO] GUI ← IDLE (green)
+11:01:39 [INFO] FSEvent: WAIT_USER (clarify)
+11:01:39 [INFO] FSM → IDLE (🟢 空闲)
+11:01:39 [INFO] GUI ← WAIT_USER (yellow)
+11:01:39 [INFO] FSM → WAIT_USER (🟡 等待用户)
+11:03:26 [INFO] HTTP ← event=idle source=ui detail={}
+11:03:26 [INFO] FSEvent: IDLE (ui idle)
+11:03:26 [INFO] GUI ← IDLE (green)
+11:03:26 [INFO] FSM → IDLE (🟢 空闲)
+11:04:17 [INFO] ==================================================
+11:04:17 [INFO] 启动… Python 3.11.15 PID=25096
+11:04:17 [INFO] PyQt6 OK
+11:04:17 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+11:04:17 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+11:04:17 [INFO] main() PID=25096
+11:04:17 [INFO] GUI 初始化…
+11:04:17 [INFO] GUI 就绪
+11:04:17 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+11:04:17 [INFO] 事件源已启动 (间隔 200ms)
+11:04:17 [INFO] HTTP 事件接收器已启动 → http://127.0.0.1:18888/event
+11:04:17 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+11:04:18 [INFO] FSEvent: IDLE (session start)
+11:04:18 [INFO] FSM → IDLE (🟢 空闲)
+11:04:54 [INFO] FSEvent: OFFLINE (offline)
+11:04:54 [INFO] GUI ← OFFLINE (yellow)
+11:04:54 [INFO] FSM → OFFLINE (🟡 离线)
+11:04:57 [INFO] FSEvent: IDLE (online)
+11:04:57 [INFO] GUI ← IDLE (green)
+11:04:57 [INFO] FSM → IDLE (🟢 空闲)
+11:05:57 [INFO] ==================================================
+11:05:57 [INFO] 启动… Python 3.11.15 PID=12928
+11:05:57 [INFO] PyQt6 OK
+11:05:57 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+11:05:57 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+11:05:57 [INFO] main() PID=12928
+11:05:57 [INFO] GUI 初始化…
+11:05:57 [INFO] GUI 就绪
+11:05:57 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+11:05:57 [INFO] 事件源已启动 (间隔 200ms)
+11:05:57 [INFO] HTTP 事件接收器已启动 → http://127.0.0.1:18888/event
+11:05:57 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+11:05:58 [INFO] FSEvent: IDLE (session start)
+11:05:58 [INFO] FSM → IDLE (🟢 空闲)
+11:06:01 [INFO] HTTP ← event=busy source=ui detail={}
+11:06:01 [INFO] FSEvent: RUNNING (busy)
+11:06:01 [INFO] GUI ← RUNNING (red)
+11:06:01 [INFO] FSM → RUNNING (🔴 正在执行)
+11:06:37 [INFO] ==================================================
+11:06:37 [INFO] 启动… Python 3.11.15 PID=22036
+11:06:37 [INFO] PyQt6 OK
+11:06:37 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+11:06:37 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+11:06:37 [INFO] main() PID=22036
+11:06:37 [INFO] GUI 初始化…
+11:06:37 [INFO] GUI 就绪
+11:06:37 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+11:06:37 [INFO] 事件源已启动 (间隔 200ms)
+11:06:37 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+11:06:37 [INFO] HTTP 事件接收器已启动 → http://127.0.0.1:18888/event
+11:06:38 [INFO] FSEvent: IDLE (session start)
+11:06:38 [INFO] FSM → IDLE (🟢 空闲)
+11:06:53 [INFO] 强制刷新检测缓存
+11:07:03 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:07:03 [INFO] GUI ← RUNNING (red)
+11:07:03 [INFO] FSEvent: IDLE (tool end)
+11:07:03 [INFO] GUI ← IDLE (green)
+11:07:03 [INFO] FSM → RUNNING (🔴 正在执行)
+11:07:03 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:07:03 [INFO] GUI ← RUNNING (red)
+11:07:03 [INFO] FSM → IDLE (🟢 空闲)
+11:07:03 [INFO] FSEvent: IDLE (tool end)
+11:07:03 [INFO] FSM → RUNNING (🔴 正在执行)
+11:07:03 [INFO] GUI ← IDLE (green)
+11:07:03 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:07:03 [INFO] FSM → IDLE (🟢 空闲)
+11:07:03 [INFO] GUI ← RUNNING (red)
+11:07:03 [INFO] FSEvent: IDLE (tool end)
+11:07:03 [INFO] FSM → RUNNING (🔴 正在执行)
+11:07:03 [INFO] GUI ← IDLE (green)
+11:07:03 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:07:03 [INFO] FSM → IDLE (🟢 空闲)
+11:07:03 [INFO] GUI ← RUNNING (red)
+11:07:03 [INFO] FSEvent: IDLE (tool end)
+11:07:03 [INFO] GUI ← IDLE (green)
+11:07:03 [INFO] FSM → RUNNING (🔴 正在执行)
+11:07:03 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:07:03 [INFO] GUI ← RUNNING (red)
+11:07:03 [INFO] FSM → IDLE (🟢 空闲)
+11:07:03 [INFO] FSEvent: IDLE (tool end)
+11:07:03 [INFO] FSM → RUNNING (🔴 正在执行)
+11:07:03 [INFO] GUI ← IDLE (green)
+11:07:03 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:07:03 [INFO] GUI ← RUNNING (red)
+11:07:03 [INFO] FSEvent: IDLE (tool end)
+11:07:03 [INFO] FSM → IDLE (🟢 空闲)
+11:07:03 [INFO] GUI ← IDLE (green)
+11:07:03 [INFO] FSM → RUNNING (🔴 正在执行)
+11:07:03 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:07:03 [INFO] FSM → IDLE (🟢 空闲)
+11:07:03 [INFO] GUI ← RUNNING (red)
+11:07:03 [INFO] FSEvent: IDLE (tool end)
+11:07:03 [INFO] FSM → RUNNING (🔴 正在执行)
+11:07:03 [INFO] GUI ← IDLE (green)
+11:07:03 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:07:03 [INFO] FSM → IDLE (🟢 空闲)
+11:07:03 [INFO] GUI ← RUNNING (red)
+11:07:03 [INFO] FSEvent: IDLE (tool end)
+11:07:03 [INFO] FSM → RUNNING (🔴 正在执行)
+11:07:03 [INFO] GUI ← IDLE (green)
+11:07:03 [INFO] FSM → IDLE (🟢 空闲)
+11:07:32 [INFO] HTTP ← event=idle source=ui detail={}
+11:07:32 [INFO] FSEvent: IDLE (ui idle)
+11:08:10 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:08:10 [INFO] GUI ← RUNNING (red)
+11:08:10 [INFO] FSEvent: IDLE (tool end)
+11:08:10 [INFO] GUI ← IDLE (green)
+11:08:10 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:08:10 [INFO] FSM → RUNNING (🔴 正在执行)
+11:08:10 [INFO] GUI ← RUNNING (red)
+11:08:10 [INFO] FSM → IDLE (🟢 空闲)
+11:08:10 [INFO] FSEvent: IDLE (tool end)
+11:08:10 [INFO] GUI ← IDLE (green)
+11:08:10 [INFO] FSM → RUNNING (🔴 正在执行)
+11:08:10 [INFO] FSM → IDLE (🟢 空闲)
+11:09:31 [INFO] 强制刷新检测缓存
+11:10:00 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:10:00 [INFO] GUI ← RUNNING (red)
+11:10:00 [INFO] FSEvent: IDLE (tool end)
+11:10:00 [INFO] GUI ← IDLE (green)
+11:10:00 [INFO] FSM → RUNNING (🔴 正在执行)
+11:10:00 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:10:00 [INFO] GUI ← RUNNING (red)
+11:10:00 [INFO] FSM → IDLE (🟢 空闲)
+11:10:00 [INFO] FSEvent: IDLE (tool end)
+11:10:00 [INFO] GUI ← IDLE (green)
+11:10:00 [INFO] FSM → RUNNING (🔴 正在执行)
+11:10:00 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:10:00 [INFO] GUI ← RUNNING (red)
+11:10:00 [INFO] FSM → IDLE (🟢 空闲)
+11:10:00 [INFO] FSEvent: IDLE (tool end)
+11:10:00 [INFO] GUI ← IDLE (green)
+11:10:00 [INFO] FSM → RUNNING (🔴 正在执行)
+11:10:00 [INFO] FSM → IDLE (🟢 空闲)
+11:16:48 [INFO] 退出中…
+11:16:53 [INFO] ==================================================
+11:16:53 [INFO] 启动… Python 3.11.15 PID=6984
+11:16:53 [INFO] PyQt6 OK
+11:16:53 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+11:16:53 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+11:16:53 [INFO] main() PID=6984
+11:16:53 [INFO] GUI 初始化…
+11:16:53 [INFO] GUI 就绪
+11:16:53 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+11:16:53 [INFO] 事件源已启动 (间隔 200ms)
+11:16:53 [INFO] HTTP 事件接收器已启动 → http://127.0.0.1:18888/event
+11:16:53 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+11:16:54 [INFO] FSEvent: IDLE (session start)
+11:16:54 [INFO] FSM → IDLE (🟢 空闲)
+11:17:57 [INFO] HTTP ← event=busy source=ui detail={}
+11:17:58 [INFO] FSEvent: RUNNING (busy)
+11:17:58 [INFO] GUI ← RUNNING (red)
+11:17:58 [INFO] FSM → RUNNING (🔴 正在执行)
+11:19:15 [INFO] ==================================================
+11:19:15 [INFO] 启动… Python 3.11.15 PID=13744
+11:19:15 [INFO] PyQt6 OK
+11:19:15 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+11:19:15 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+11:19:15 [INFO] main() PID=13744
+11:19:15 [INFO] GUI 初始化…
+11:19:15 [INFO] GUI 就绪
+11:19:15 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+11:19:15 [INFO] 事件源已启动 (间隔 200ms)
+11:19:15 [INFO] HTTP 事件接收器已启动 → http://127.0.0.1:18888/event
+11:19:15 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+11:19:16 [INFO] FSEvent: IDLE (session start)
+11:19:16 [INFO] FSM → IDLE (🟢 空闲)
+11:20:02 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:20:02 [INFO] GUI ← RUNNING (red)
+11:20:02 [INFO] FSEvent: IDLE (tool end)
+11:20:02 [INFO] FSM → RUNNING (🔴 正在执行)
+11:20:02 [INFO] GUI ← IDLE (green)
+11:20:02 [INFO] FSM → IDLE (🟢 空闲)
+11:20:02 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:20:02 [INFO] GUI ← RUNNING (red)
+11:20:02 [INFO] FSEvent: IDLE (tool end)
+11:20:02 [INFO] FSM → RUNNING (🔴 正在执行)
+11:20:02 [INFO] GUI ← IDLE (green)
+11:20:02 [INFO] FSM → IDLE (🟢 空闲)
+11:20:33 [INFO] HTTP ← event=session_end source=ui detail={}
+11:20:33 [INFO] FSEvent: OFFLINE (session_end)
+11:20:33 [INFO] GUI ← OFFLINE (yellow)
+11:20:33 [INFO] FSM → OFFLINE (🟡 离线)
+11:20:46 [INFO] 强制刷新检测缓存
+11:20:56 [INFO] 退出中…
+11:22:30 [INFO] ==================================================
+11:22:30 [INFO] 启动… Python 3.11.15 PID=11816
+11:22:30 [INFO] PyQt6 OK
+11:22:30 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+11:22:30 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+11:22:30 [INFO] main() PID=11816
+11:22:30 [INFO] GUI 初始化…
+11:22:30 [INFO] GUI 就绪
+11:22:30 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+11:22:30 [INFO] 事件源已启动 (间隔 200ms)
+11:22:30 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+11:22:30 [INFO] HTTP 事件接收器已启动 → http://127.0.0.1:18888/event
+11:22:31 [INFO] FSEvent: IDLE (session start)
+11:22:31 [INFO] FSM → IDLE (🟢 空闲)
+11:22:57 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:22:57 [INFO] GUI ← RUNNING (red)
+11:22:57 [INFO] FSEvent: IDLE (tool end)
+11:22:57 [INFO] FSM → RUNNING (🔴 正在执行)
+11:22:57 [INFO] GUI ← IDLE (green)
+11:22:57 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:22:57 [INFO] FSM → IDLE (🟢 空闲)
+11:22:57 [INFO] GUI ← RUNNING (red)
+11:22:57 [INFO] FSEvent: IDLE (tool end)
+11:22:57 [INFO] FSM → RUNNING (🔴 正在执行)
+11:22:57 [INFO] GUI ← IDLE (green)
+11:22:57 [INFO] FSM → IDLE (🟢 空闲)
+11:23:17 [INFO] HTTP ← event=session_end source=ui detail={}
+11:23:17 [INFO] FSEvent: OFFLINE (session_end)
+11:23:17 [INFO] GUI ← OFFLINE (yellow)
+11:23:17 [INFO] FSM → OFFLINE (🟡 离线)
+11:24:19 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:24:19 [INFO] GUI ← RUNNING (red)
+11:24:19 [INFO] FSEvent: IDLE (tool end)
+11:24:19 [INFO] GUI ← IDLE (green)
+11:24:19 [INFO] FSM → RUNNING (🔴 正在执行)
+11:24:19 [INFO] FSM → IDLE (🟢 空闲)
+11:24:53 [INFO] HTTP ← event=idle source=ui detail={}
+11:24:53 [INFO] FSEvent: IDLE (ui idle)
+11:25:22 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:25:22 [INFO] GUI ← RUNNING (red)
+11:25:22 [INFO] FSEvent: IDLE (tool end)
+11:25:22 [INFO] FSM → RUNNING (🔴 正在执行)
+11:25:22 [INFO] GUI ← IDLE (green)
+11:25:22 [INFO] FSM → IDLE (🟢 空闲)
+11:26:20 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:26:20 [INFO] GUI ← RUNNING (red)
+11:26:20 [INFO] FSEvent: IDLE (tool end)
+11:26:20 [INFO] FSM → RUNNING (🔴 正在执行)
+11:26:20 [INFO] GUI ← IDLE (green)
+11:26:20 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:26:20 [INFO] FSM → IDLE (🟢 空闲)
+11:26:20 [INFO] GUI ← RUNNING (red)
+11:26:20 [INFO] FSEvent: IDLE (tool end)
+11:26:20 [INFO] FSM → RUNNING (🔴 正在执行)
+11:26:20 [INFO] GUI ← IDLE (green)
+11:26:20 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:26:20 [INFO] FSM → IDLE (🟢 空闲)
+11:26:20 [INFO] GUI ← RUNNING (red)
+11:26:20 [INFO] FSEvent: IDLE (tool end)
+11:26:20 [INFO] FSM → RUNNING (🔴 正在执行)
+11:26:20 [INFO] GUI ← IDLE (green)
+11:26:20 [INFO] FSM → IDLE (🟢 空闲)
+11:26:41 [INFO] HTTP ← event=idle source=ui detail={}
+11:26:41 [INFO] FSEvent: IDLE (ui idle)
+11:26:56 [INFO] HTTP ← event=busy source=ui detail={}
+11:26:56 [INFO] FSEvent: RUNNING (busy)
+11:26:56 [INFO] GUI ← RUNNING (red)
+11:26:56 [INFO] FSM → RUNNING (🔴 正在执行)
+11:27:04 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:27:04 [INFO] FSEvent: IDLE (tool end)
+11:27:04 [INFO] GUI ← IDLE (green)
+11:27:04 [INFO] FSM → IDLE (🟢 空闲)
+11:27:05 [INFO] HTTP ← event=idle source=ui detail={}
+11:27:05 [INFO] FSEvent: IDLE (ui idle)
+11:28:23 [INFO] HTTP ← event=busy source=ui detail={}
+11:28:23 [INFO] FSEvent: RUNNING (busy)
+11:28:23 [INFO] GUI ← RUNNING (red)
+11:28:23 [INFO] FSM → RUNNING (🔴 正在执行)
+11:28:45 [INFO] ==================================================
+11:28:45 [INFO] 启动… Python 3.11.15 PID=1216
+11:28:45 [INFO] PyQt6 OK
+11:28:45 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+11:28:45 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+11:28:45 [INFO] main() PID=1216
+11:28:45 [INFO] GUI 初始化…
+11:28:45 [INFO] GUI 就绪
+11:28:45 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+11:28:45 [INFO] 事件源已启动 (间隔 200ms)
+11:28:45 [INFO] HTTP 事件接收器已启动 → http://127.0.0.1:18888/event
+11:28:45 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+11:28:46 [INFO] FSEvent: IDLE (session start)
+11:28:46 [INFO] FSM → IDLE (🔴 已停止)
+11:28:59 [INFO] HTTP ← event=busy source=ui detail={}
+11:28:59 [INFO] FSEvent: RUNNING (busy)
+11:28:59 [INFO] GUI ← RUNNING (green)
+11:28:59 [INFO] FSM → RUNNING (🟢 正在运行)
+11:29:00 [INFO] HTTP ← event=needs_input source=ui detail={}
+11:29:00 [INFO] FSEvent: WAIT_USER (needs_input)
+11:29:00 [INFO] GUI ← WAIT_USER (yellow)
+11:29:00 [INFO] FSM → WAIT_USER (🟡 需要操作)
+11:29:01 [INFO] HTTP ← event=idle source=ui detail={}
+11:29:01 [INFO] FSEvent: IDLE (ui idle)
+11:29:01 [INFO] GUI ← IDLE (red)
+11:29:01 [INFO] FSM → IDLE (🔴 已停止)
+11:29:06 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:29:06 [INFO] GUI ← RUNNING (green)
+11:29:06 [INFO] FSEvent: IDLE (tool end)
+11:29:06 [INFO] FSM → RUNNING (🟢 正在运行)
+11:29:06 [INFO] GUI ← IDLE (red)
+11:29:06 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:29:06 [INFO] FSM → IDLE (🔴 已停止)
+11:29:06 [INFO] GUI ← RUNNING (green)
+11:29:06 [INFO] FSEvent: IDLE (tool end)
+11:29:06 [INFO] FSM → RUNNING (🟢 正在运行)
+11:29:06 [INFO] GUI ← IDLE (red)
+11:29:06 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:29:06 [INFO] FSM → IDLE (🔴 已停止)
+11:29:06 [INFO] GUI ← RUNNING (green)
+11:29:06 [INFO] FSEvent: IDLE (tool end)
+11:29:06 [INFO] GUI ← IDLE (red)
+11:29:06 [INFO] FSM → RUNNING (🟢 正在运行)
+11:29:06 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:29:06 [INFO] FSM → IDLE (🔴 已停止)
+11:29:06 [INFO] GUI ← RUNNING (green)
+11:29:06 [INFO] FSEvent: IDLE (tool end)
+11:29:06 [INFO] FSM → RUNNING (🟢 正在运行)
+11:29:06 [INFO] GUI ← IDLE (red)
+11:29:06 [INFO] FSEvent: RUNNING (tool_start tool=?)
+11:29:06 [INFO] FSM → IDLE (🔴 已停止)
+11:29:06 [INFO] GUI ← RUNNING (green)
+11:29:06 [INFO] FSEvent: IDLE (tool end)
+11:29:06 [INFO] FSM → RUNNING (🟢 正在运行)
+11:29:06 [INFO] GUI ← IDLE (red)
+11:29:06 [INFO] FSM → IDLE (🔴 已停止)
+11:29:06 [INFO] HTTP ← event=idle source=ui detail={}
+11:29:06 [INFO] FSEvent: IDLE (ui idle)
+11:29:23 [INFO] HTTP ← event=busy source=ui detail={}
+11:29:23 [INFO] FSEvent: RUNNING (busy)
+11:29:23 [INFO] GUI ← RUNNING (green)
+11:29:23 [INFO] FSM → RUNNING (🟢 正在运行)
+11:29:26 [INFO] HTTP ← event=needs_input source=ui detail={}
+11:29:27 [INFO] FSEvent: WAIT_USER (needs_input)
+11:29:27 [INFO] GUI ← WAIT_USER (yellow)
+11:29:27 [INFO] FSM → WAIT_USER (🟡 需要操作)
+11:29:32 [INFO] HTTP ← event=idle source=ui detail={}
+11:29:32 [INFO] FSEvent: IDLE (ui idle)
+11:29:32 [INFO] GUI ← IDLE (red)
+11:29:32 [INFO] FSM → IDLE (🔴 已停止)
+11:30:22 [INFO] HTTP ← event=busy source=ui detail={}
+11:30:22 [INFO] FSEvent: RUNNING (busy)
+11:30:22 [INFO] GUI ← RUNNING (green)
+11:30:22 [INFO] FSM → RUNNING (🟢 正在运行)
+11:30:33 [INFO] ==================================================
+11:30:33 [INFO] 启动… Python 3.11.15 PID=4892
+11:30:33 [INFO] PyQt6 OK
+11:30:33 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+11:30:33 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+11:30:33 [INFO] main() PID=4892
+11:30:33 [INFO] GUI 初始化…
+11:30:33 [INFO] GUI 就绪
+11:30:33 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+11:30:33 [INFO] 事件源已启动 (间隔 200ms)
+11:30:33 [INFO] HTTP 事件接收器已启动 → http://127.0.0.1:18888/event
+11:30:33 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+11:30:34 [INFO] HTTP ← event=idle source=ui detail={}
+11:30:34 [INFO] FSM → IDLE (🔴 已停止)
+11:30:34 [INFO] FSEvent: IDLE (ui idle)
+11:32:45 [INFO] HTTP ← event=busy source=ui detail={}
+11:32:45 [INFO] FSEvent: RUNNING (busy)
+11:32:45 [INFO] GUI ← RUNNING (green)
+11:32:45 [INFO] FSM → RUNNING (🟢 正在运行)
+11:33:21 [INFO] HTTP ← event=busy source=ui detail={}
+11:33:22 [INFO] FSEvent: RUNNING (busy)
+11:33:22 [INFO] HTTP ← event=busy source=ui detail={}
+11:33:22 [INFO] FSEvent: RUNNING (busy)
+11:33:23 [INFO] HTTP ← event=busy source=ui detail={}
+11:33:23 [INFO] FSEvent: RUNNING (busy)
+11:33:30 [INFO] ==================================================
+11:33:30 [INFO] 启动… Python 3.11.15 PID=1772
+11:33:30 [INFO] PyQt6 OK
+11:33:30 [INFO] state.db = C:\Users\Administrator\AppData\Local\hermes\state.db  存在
+11:33:30 [INFO] API = 127.0.0.1:8642  Web = http://127.0.0.1:19876
+11:33:30 [INFO] main() PID=1772
+11:33:30 [INFO] 已注入 JS: C:\Users\Administrator\AppData\Local\hermes\hermes-agent\apps\desktop\release\win-unpacked\resources\app.asar.unpacked\dist\assets\hermes-tl-observer.js
+11:33:30 [INFO] index.html 已有注入标记
+11:33:30 [INFO] GUI 初始化…
+11:33:30 [INFO] GUI 就绪
+11:33:30 [INFO] 系统托盘已显示  |  Web: http://127.0.0.1:19876  |  日志: F:\JZT\Python\hermes_traffic_light\traffic_light.log
+11:33:30 [INFO] 事件源已启动 (间隔 200ms)
+11:33:30 [INFO] Web 服务器已启动 → http://127.0.0.1:19876
+11:33:30 [INFO] HTTP 事件接收器已启动 → http://127.0.0.1:18888/event
+11:33:31 [INFO] FSEvent: IDLE (session start)
+11:33:31 [INFO] FSM → IDLE (🔴 已停止)
