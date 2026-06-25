@@ -91,86 +91,210 @@ log.info("API = %s:%d  Web = http://127.0.0.1:%d", API_HOST, API_PORT, WEB_PORT)
 
 
 # ═══════════════════════════════════════════════════════════
-#  HTML 页面（发光红绿灯）
+#  多语言 HTML 页面（发光红绿灯）
 # ═══════════════════════════════════════════════════════════
 
-_HTML_PAGE = r"""<!DOCTYPE html>
-<html lang="zh">
+_LANG = "cn"  # 当前语言: cn/en/jp/kr
+
+_LANG_LABELS = {
+    "cn": {
+        "red": "🔴 已停止", "yellow": "🟡 等待用户", "green": "🟢 正在运行",
+        "status_running": "Hermes 正在执行任务",
+        "status_idle": "Hermes 已停止",
+        "status_wait": "等待用户操作",
+        "status_off": "Hermes 未检测到",
+        "title_running": "正在运行",
+        "title_idle": "已停止",
+        "title_wait": "等待用户",
+        "title_off": "离线",
+        "badge": "实时事件驱动",
+        "footer": "Hermes Traffic Light · 实时事件驱动",
+    },
+    "en": {
+        "red": "🔴 Stopped", "yellow": "🟡 Waiting", "green": "🟢 Running",
+        "status_running": "Hermes is executing tasks",
+        "status_idle": "Hermes stopped",
+        "status_wait": "Waiting for user input",
+        "status_off": "Hermes not detected",
+        "title_running": "Running",
+        "title_idle": "Stopped",
+        "title_wait": "Waiting",
+        "title_off": "Offline",
+        "badge": "Real-time event driven",
+        "footer": "Hermes Traffic Light · Real-time Event Driven",
+    },
+    "jp": {
+        "red": "🔴 停止中", "yellow": "🟡 待機中", "green": "🟢 実行中",
+        "status_running": "Hermes がタスクを実行中",
+        "status_idle": "Hermes 停止中",
+        "status_wait": "ユーザーの操作を待機中",
+        "status_off": "Hermes が検出されていません",
+        "title_running": "実行中",
+        "title_idle": "停止中",
+        "title_wait": "待機中",
+        "title_off": "オフライン",
+        "badge": "リアルタイムイベント駆動",
+        "footer": "Hermes Traffic Light · リアルタイムイベント駆動",
+    },
+    "kr": {
+        "red": "🔴 중지됨", "yellow": "🟡 대기 중", "green": "🟢 실행 중",
+        "status_running": "Hermes가 작업을 실행 중입니다",
+        "status_idle": "Hermes 중지됨",
+        "status_wait": "사용자 입력을 기다리는 중",
+        "status_off": "Hermes를 찾을 수 없음",
+        "title_running": "실행 중",
+        "title_idle": "중지됨",
+        "title_wait": "대기 중",
+        "title_off": "오프라인",
+        "badge": "실시간 이벤트 기반",
+        "footer": "Hermes Traffic Light · 실시간 이벤트 기반",
+    },
+}
+
+
+def _lang_str(key: str) -> str:
+    """获取当前语言的字符串。"""
+    return _LANG_LABELS.get(_LANG, _LANG_LABELS["cn"]).get(key, key)
+
+
+def _set_lang(lang: str):
+    """切换语言并持久化到配置文件。"""
+    global _LANG
+    if lang in _LANG_LABELS:
+        _LANG = lang
+        try:
+            (APP_DIR / ".lang").write_text(lang, encoding="utf-8")
+        except Exception:
+            pass
+        log.info("语言已切换 → %s", lang.upper())
+
+
+def _load_lang():
+    """从持久化文件加载语言。"""
+    global _LANG
+    try:
+        saved = (APP_DIR / ".lang").read_text(encoding="utf-8").strip()
+        if saved in _LANG_LABELS:
+            _LANG = saved
+    except Exception:
+        pass
+
+
+_load_lang()
+
+
+def _render_html() -> str:
+    """生成当前语言的 HTML 页面。"""
+    L = _LANG_LABELS.get(_LANG, _LANG_LABELS["cn"])
+    js_status = json.dumps({
+        "red":    {"icon": "🔴", "text": L["status_idle"], "title": L["title_idle"]},
+        "green":  {"icon": "🟢", "text": L["status_running"], "title": L["title_running"]},
+        "yellow": {"icon": "🟡", "text": L["status_wait"], "title": L["title_wait"]},
+        "off":    {"icon": "⚫", "text": L["status_off"], "title": L["title_off"]},
+    }, ensure_ascii=False)
+
+    return f"""<!DOCTYPE html>
+<html lang="{_LANG}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hermes 工作状态</title>
+<title>{L["title_idle"]} - Hermes</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
+  * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+  body {{
     background: #0d1117;
     display: flex; justify-content: center; align-items: center;
     min-height: 100vh;
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     user-select: none;
-  }
-  .container { display: flex; flex-direction: column; align-items: center; gap: 8px; }
-  .light-box {
+  }}
+  .container {{ display: flex; flex-direction: column; align-items: center; gap: 8px; }}
+  .light-box {{
     background: #161b22; border-radius: 24px; padding: 24px 36px;
     display: flex; flex-direction: column; gap: 16px;
     box-shadow: 0 8px 32px rgba(0,0,0,0.5);
-  }
-  .light { width: 96px; height: 96px; border-radius: 50%; transition: all 0.3s ease; }
-  .light-red    { background: #2d1515; }
-  .light-yellow { background: #2d2510; }
-  .light-green  { background: #152d20; }
-  .light-red.on    { background: #ff3333; box-shadow: 0 0 50px #ff3333cc, 0 0 100px #ff222266; }
-  .light-yellow.on { background: #ffaa00; box-shadow: 0 0 50px #ffaa00cc, 0 0 100px #ff880066; }
-  .light-green.on  { background: #33ff55; box-shadow: 0 0 50px #33ff55cc, 0 0 100px #22ff4466; }
-  .label { text-align: center; font-size: 14px; color: #8b949e; margin-top: 4px; }
-  .label .active { color: #e6edf3; font-weight: bold; }
-  .status-text { font-size: 13px; color: #484f58; margin-top: 8px; text-align: center; }
-  .mode-badge { font-size: 11px; color: #58a6ff; margin-top: 6px; }
-  .footer { font-size: 11px; color: #484f58; margin-top: 16px; }
+  }}
+  .light {{ width: 96px; height: 96px; border-radius: 50%; transition: all 0.3s ease; }}
+  .light-red    {{ background: #2d1515; }}
+  .light-yellow {{ background: #2d2510; }}
+  .light-green  {{ background: #152d20; }}
+  .light-red.on    {{ background: #ff3333; box-shadow: 0 0 50px #ff3333cc, 0 0 100px #ff222266; }}
+  .light-yellow.on {{ background: #ffaa00; box-shadow: 0 0 50px #ffaa00cc, 0 0 100px #ff880066; }}
+  .light-green.on  {{ background: #33ff55; box-shadow: 0 0 50px #33ff55cc, 0 0 100px #22ff4466; }}
+  .label {{ text-align: center; font-size: 14px; color: #8b949e; margin-top: 4px; }}
+  .label .active {{ color: #e6edf3; font-weight: bold; }}
+  .status-text {{ font-size: 13px; color: #484f58; margin-top: 8px; text-align: center; }}
+  .mode-badge {{ font-size: 11px; color: #58a6ff; margin-top: 6px; }}
+  .footer {{ font-size: 11px; color: #484f58; margin-top: 16px; }}
+  .lang-bar {{ display: flex; gap: 6px; margin-top: 12px; }}
+  .lang-btn {{
+    font-size: 10px; padding: 2px 8px; border-radius: 4px;
+    background: #21262d; color: #8b949e; cursor: pointer; border: 1px solid #30363d;
+    transition: all 0.2s;
+  }}
+  .lang-btn.active {{ background: #1f6feb; color: #fff; border-color: #1f6feb; }}
+  .lang-btn:hover {{ background: #30363d; }}
 </style>
 </head>
 <body>
 <div class="container">
   <div class="light-box">
     <div class="light light-red" id="l-red"></div>
-    <div class="label"><span id="lb-red">🔴 正在执行</span></div>
+    <div class="label"><span id="lb-red">{L["red"]}</span></div>
     <div class="light light-yellow" id="l-yellow"></div>
-    <div class="label"><span id="lb-yellow">🟡 等待用户</span></div>
+    <div class="label"><span id="lb-yellow">{L["yellow"]}</span></div>
     <div class="light light-green" id="l-green"></div>
-    <div class="label"><span id="lb-green">🟢 空闲</span></div>
+    <div class="label"><span id="lb-green">{L["green"]}</span></div>
   </div>
   <div class="status-text"><span id="status-icon">⚫</span> <span id="status-text">检测中…</span></div>
-  <div class="mode-badge">基于 state.db + API 实时判断</div>
-  <div class="footer">Hermes Traffic Light</div>
+  <div class="mode-badge">{L["badge"]}</div>
+  <div class="lang-bar">
+    <span class="lang-btn{' active' if _LANG=='cn' else ''}" onclick="setLang('cn')">中文</span>
+    <span class="lang-btn{' active' if _LANG=='en' else ''}" onclick="setLang('en')">EN</span>
+    <span class="lang-btn{' active' if _LANG=='jp' else ''}" onclick="setLang('jp')">日本語</span>
+    <span class="lang-btn{' active' if _LANG=='kr' else ''}" onclick="setLang('kr')">한국어</span>
+  </div>
+  <div class="footer">{L["footer"]}</div>
 </div>
 <script>
   let current = 'off';
-  const STATUS = {
-    red:    { icon: '🔴', text: 'Hermes 空闲中',        title: '已停止' },
-    green:  { icon: '🟢', text: 'Hermes 正在执行任务',  title: '正在运行' },
-    yellow: { icon: '🟡', text: '等待用户操作',          title: '需要操作' },
-    off:    { icon: '⚫', text: 'Hermes 未检测到',       title: '离线' },
-  };
-  async function poll() {
-    try {
+  const LANG = {js_status};
+  const LANG_MAP = {{cn:'中文',en:'EN',jp:'日本語',kr:'한국어'}};
+  let currentLang = '{_LANG}';
+
+  async function setLang(lang) {{
+    await fetch('/lang?lang=' + lang);
+    location.reload();
+  }}
+
+  function updateLangBar(lang) {{
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    const btns = document.querySelectorAll('.lang-btn');
+    const keys = ['cn','en','jp','kr'];
+    const idx = keys.indexOf(lang);
+    if (idx >= 0 && btns[idx]) btns[idx].classList.add('active');
+  }}
+
+  async function poll() {{
+    try {{
       const r = await (await fetch('/state')).json();
       const st = r.state || 'off';
       if (st === current) return;
       document.querySelectorAll('.light').forEach(e => e.classList.remove('on'));
       document.querySelectorAll('.label span').forEach(e => e.classList.remove('active'));
-      if (st !== 'off') {
+      if (st !== 'off') {{
         const el = document.getElementById('l-' + st);
         if (el) el.classList.add('on');
         const lb = document.getElementById('lb-' + st);
         if (lb) lb.classList.add('active');
-      }
-      const info = STATUS[st] || STATUS.off;
+      }}
+      const info = LANG[st] || LANG.off;
       document.getElementById('status-icon').textContent = info.icon;
-      document.getElementById('status-text').textContent = info.text + (r.timestamp ? ' \u00b7 ' + r.timestamp : '');
+      document.getElementById('status-text').textContent = info.text + (r.timestamp ? ' · ' + r.timestamp : '');
       document.title = info.title + ' - Hermes';
       current = st;
-    } catch(e) {}
-  }
+    }} catch(e) {{}}
+  }}
   setInterval(poll, 500); poll();
 </script>
 </body>
@@ -189,8 +313,13 @@ class StateHandler(BaseHTTPRequestHandler):
             st = StateHandler._state_getter() if StateHandler._state_getter else {}
             body = json.dumps(st, ensure_ascii=False).encode()
             ctype = 'application/json'
+        elif self.path.startswith('/lang'):
+            lang = self.path.split('lang=')[-1] if 'lang=' in self.path else 'cn'
+            _set_lang(lang)
+            body = b'{"ok":true}'
+            ctype = 'application/json'
         else:
-            body = _HTML_PAGE.encode('utf-8')
+            body = _render_html().encode('utf-8')
             ctype = 'text/html; charset=utf-8'
         self.send_response(200)
         self.send_header('Content-Type', ctype)
@@ -982,6 +1111,18 @@ class TrafficLightApp(QApplication):
 
         m.addSeparator()
 
+        # ── 语言切换子菜单 ──
+        self._lang_menu = m.addMenu("🌐 Language")
+        self._lang_actions = {}
+        for code, name in [("cn", "中文"), ("en", "English"), ("jp", "日本語"), ("kr", "한국어")]:
+            a = QAction(name, self._lang_menu, checkable=True)
+            a.setChecked(code == _LANG)
+            a.triggered.connect(lambda checked, c=code: self._set_lang_tray(c))
+            self._lang_menu.addAction(a)
+            self._lang_actions[code] = a
+
+        m.addSeparator()
+
         self._a_autostart = QAction("🔌 开机自启", checkable=True)
         self._a_autostart.setChecked(_is_autostart_enabled())
         self._a_autostart.triggered.connect(self._toggle_autostart)
@@ -1037,6 +1178,13 @@ class TrafficLightApp(QApplication):
         if self._worker_ref:
             self._worker_ref._proc.invalidate()
         log.info("强制刷新检测缓存")
+
+    def _set_lang_tray(self, code: str):
+        """切换语言并更新菜单勾选状态。"""
+        _set_lang(code)
+        for c, a in self._lang_actions.items():
+            a.setChecked(c == code)
+        log.info("语言已切换 → %s", code.upper())
 
     def _toggle_autostart(self, checked: bool):
         """切换开机自启。"""
