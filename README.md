@@ -281,6 +281,75 @@ hermes_traffic_light/
 
 ---
 
+## 🇰🇷 한국어
+
+### 이게 뭔가요?
+
+**Hermes Traffic Light**는 [Hermes Agent](https://hermes-agent.nousresearch.com)의 작동 상태를 실시간으로 모니터링하는 **Windows 시스템 트레이 신호등**입니다. **3-소스 이벤트 기반 아키텍처**를 사용하여 MutationObserver를 Hermes 프론트엔드에 주입함으로써 진정한 실시간 상태 피드백을 제공합니다:
+
+| 색상 | 상태 | 의미 |
+|:---:|:---:|:---|
+| 🟢 **초록** (고정) | **실행 중** | Agent가 작업을 실행 중입니다 |
+| 🟡 **노랑** (느린 점멸) | **입력 필요** | Agent가 사용자 확인 또는 입력을 기다리는 중 |
+| 🔴 **빨강** (고정) | **중지됨** | 응답 완료, 대기 중 |
+| 🟡 **노랑** (고정) | **오프라인** | Hermes가 실행되고 있지 않음 |
+
+### 기능
+
+- 🪟 **시스템 트레이 아이콘** — 4가지 상태 신호등, 우클릭 메뉴
+- 🌐 **웹 인터페이스** — 브라우저에서 `http://127.0.0.1:19876` 열기
+- ✨ **실시간 이벤트 기반** — MutationObserver가 Hermes UI 상태를 제로 지연으로 모니터링
+- 🧬 **자동 주입** — 시작 시 Observer가 Hermes 프론트엔드에 자동 주입됨
+- 🛡️ **이중 소스 클록 잠금** — UI 이벤트 우선 처리, DB 재생 2초 동안 차단
+- 📡 **JSON API** — `http://127.0.0.1:19876/state` 타사 도구 통합용
+- 🔌 **자동 시작** — 우클릭 메뉴에서 전환
+- 🩺 **진단 도구** — `diagnose.py` 환경 문제 해결
+- 📋 **상세 로깅** — `traffic_light.log` 모든 상태 변화 기록
+
+### 설치
+
+```bash
+# 1. 의존성 설치
+pip install PyQt6
+
+# 2. 실행
+cd hermes_traffic_light
+python traffic_light.py
+
+# 또는 start.bat 더블클릭
+```
+
+실행 후:
+- **시스템 트레이**에 신호등 아이콘 표시
+- Observer가 **Hermes 프론트엔드**에 자동 주입
+- 브라우저에서 `http://127.0.0.1:19876` 열기
+- **수동 설정 불필요** — Hermes 상태에 따라 자동 변경
+
+### 데이터 소스
+
+| 소스 | 방식 | 지연 | 역할 |
+|------|------|:----:|------|
+| UI Observer | MutationObserver → HTTP POST | 실시간 | 기본 |
+| Hermes Plugin | ctx.register_hook → UDP | 실시간 | CLI/Gateway |
+| DbEventSource | state.db 200ms 폴링 | Turn 수준 | 폴백 |
+
+### 파일 구조
+
+```
+hermes_traffic_light/
+├── traffic_light.py          ← 메인 프로그램
+├── inject-ui-observer.js     ← Hermes UI MutationObserver 스크립트
+├── diagnose.py               ← 진단 도구
+├── README.md                 ← 이 파일
+├── start.bat                 ← 빠른 실행
+├── start_interactive.bat     ← 대화형 실행
+├── diagnose.bat              ← 빠른 진단
+├── .gitignore
+└── traffic_light.log         ← 실행 로그
+```
+
+---
+
 <div align="center">
 
 **MIT License** · Made with ❤️ for the Hermes Agent community
