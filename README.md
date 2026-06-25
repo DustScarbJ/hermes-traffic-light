@@ -3,13 +3,17 @@
 # 🚦 Hermes Traffic Light
 
 **系统托盘红绿灯 · 实时监控 Hermes Agent 工作状态**
+
 **System Tray Traffic Light · Real-time monitoring of Hermes Agent status**
 
 **支持的语言**
+
 **Supported languages**
+
 [CN 中文](#-中文) · [EN English](#-english) · [JP 日本語](#-日本語) · [KR 한국어](#-한국어)
 
 **✨ 实时事件驱动 · 🌐 Web 界面 · 🔌 开机自启 · 🧬 自动注入**
+
 **✨ Real-time Event-driven · 🌐 Web Interface · 🔌 Auto-start on Boot · 🧬 Automatic Injection**
 
 </div>
